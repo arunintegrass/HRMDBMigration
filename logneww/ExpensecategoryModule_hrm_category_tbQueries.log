@@ -1,0 +1,29 @@
+Old Unique Id - 1 Unique Name - Travel
+Not Same - New Unique Id - 14 is successfully updated to hrm_category_tb
+Old Unique Id - 2 Unique Name - Tour
+Old Unique Id - 3 Unique Name - Business
+Old Unique Id - 4 Unique Name - Bill
+Not Same - New Unique Id - 1 is successfully updated to hrm_category_tb
+Old Unique Id - 5 Unique Name - Business
+Old Unique Id - 6 Unique Name - Utility
+Old Unique Id - 7 Unique Name - Phone or internet
+Old Unique Id - 8 Unique Name - democategory
+Old Unique Id - 9 Unique Name - demosubcategory
+Old Unique Id - 1 Unique Name - Travel
+Not Same - New Unique Id - 14 is successfully updated to hrm_category_tb
+Old Unique Id - 2 Unique Name - Tour
+New Unique Id - 15 is successfully migrated to hrm_category_tb
+Old Unique Id - 3 Unique Name - Business
+New Unique Id - 16 is successfully migrated to hrm_category_tb
+Old Unique Id - 4 Unique Name - Bill
+Not Same - New Unique Id - 1 is successfully updated to hrm_category_tb
+Old Unique Id - 5 Unique Name - Business
+New Unique Id - 17 is successfully migrated to hrm_category_tb
+Old Unique Id - 6 Unique Name - Utility
+New Unique Id - 18 is successfully migrated to hrm_category_tb
+Old Unique Id - 7 Unique Name - Phone or internet
+New Unique Id - 19 is successfully migrated to hrm_category_tb
+Old Unique Id - 8 Unique Name - democategory
+New Unique Id - 20 is successfully migrated to hrm_category_tb
+Old Unique Id - 9 Unique Name - demosubcategory
+New Unique Id - 21 is successfully migrated to hrm_category_tb

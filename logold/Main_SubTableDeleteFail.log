@@ -1,0 +1,2 @@
+Table hrm_company_td not deleted Successfully Cannot delete or update a parent row: a foreign key constraint fails (`temp_fobesshrm_stage`.`hrm_employee_td`, CONSTRAINT `fk_hrm_employee_td_hrm_company_td` FOREIGN KEY (`company_id`) REFERENCES `hrm_company_td` (`company_id`) ON DELETE NO ACTION ON UPDATE NO )
+Table hrm_company_td not deleted Successfully Cannot delete or update a parent row: a foreign key constraint fails (`temp_fobesshrm_stage`.`hrm_emp_type_tb`, CONSTRAINT `hrm_emp_type_tb_ibfk_1` FOREIGN KEY (`company_id`) REFERENCES `hrm_company_td` (`company_id`))

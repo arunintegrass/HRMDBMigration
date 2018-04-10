@@ -1,0 +1,16 @@
+fobess create empty table
+empty table 
+
+integrass - initate
+fobess - destination
+
+fobess - temporary with out data 
+integrass - move data to fobess
+
+example 
+user id - 1 - 101
+
+
+
+
+

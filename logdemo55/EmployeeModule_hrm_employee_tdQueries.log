@@ -1,0 +1,80 @@
+Old Unique Id - 1
+New Unique Id - 120 is successfully migrated to hrm_employee_td
+Old Unique Id - 2
+New Unique Id - 121 is successfully migrated to hrm_employee_td
+Old Unique Id - 3
+New Unique Id - 122 is successfully migrated to hrm_employee_td
+Old Unique Id - 4
+New Unique Id - 123 is successfully migrated to hrm_employee_td
+Old Unique Id - 6
+New Unique Id - 124 is successfully migrated to hrm_employee_td
+Old Unique Id - 7
+New Unique Id - 125 is successfully migrated to hrm_employee_td
+Old Unique Id - 8
+New Unique Id - 126 is successfully migrated to hrm_employee_td
+Old Unique Id - 1 Unique Name - ABMCG
+Old Unique Id - 2 Unique Name - Ganesh
+Not Same - New Unique Id - 120 is successfully updated to hrm_employee_td
+Old Unique Id - 3 Unique Name - Chandru
+Not Same - New Unique Id - 121 is successfully updated to hrm_employee_td
+Old Unique Id - 4 Unique Name - Veera
+Not Same - New Unique Id - 122 is successfully updated to hrm_employee_td
+Old Unique Id - 6 Unique Name - Praba
+Not Same - New Unique Id - 123 is successfully updated to hrm_employee_td
+Old Unique Id - 7 Unique Name - Santhosh
+Not Same - New Unique Id - 124 is successfully updated to hrm_employee_td
+Old Unique Id - 8 Unique Name - demoemp
+Not Same - New Unique Id - 125 is successfully updated to hrm_employee_td
+Old Unique Id - 1
+New Unique Id - 120 is successfully migrated to hrm_employee_td
+Old Unique Id - 2
+New Unique Id - 121 is successfully migrated to hrm_employee_td
+Old Unique Id - 3
+New Unique Id - 122 is successfully migrated to hrm_employee_td
+Old Unique Id - 4
+New Unique Id - 123 is successfully migrated to hrm_employee_td
+Old Unique Id - 6
+New Unique Id - 124 is successfully migrated to hrm_employee_td
+Old Unique Id - 7
+New Unique Id - 125 is successfully migrated to hrm_employee_td
+Old Unique Id - 8
+New Unique Id - 126 is successfully migrated to hrm_employee_td
+Old Unique Id - 9
+New Unique Id - 127 is successfully migrated to hrm_employee_td
+Old Unique Id - 10
+New Unique Id - 128 is successfully migrated to hrm_employee_td
+Old Unique Id - 1 Unique Name - Admin
+New Unique Id - 120 is successfully migrated to hrm_employee_td
+Old Unique Id - 2 Unique Name - Ganesh
+New Unique Id - 121 is successfully migrated to hrm_employee_td
+Old Unique Id - 3 Unique Name - Chandru
+New Unique Id - 122 is successfully migrated to hrm_employee_td
+Old Unique Id - 4 Unique Name - Veera
+New Unique Id - 123 is successfully migrated to hrm_employee_td
+Old Unique Id - 6 Unique Name - Praba
+New Unique Id - 124 is successfully migrated to hrm_employee_td
+Old Unique Id - 7 Unique Name - Santhosh
+New Unique Id - 125 is successfully migrated to hrm_employee_td
+Old Unique Id - 8 Unique Name - demoemp
+New Unique Id - 126 is successfully migrated to hrm_employee_td
+Old Unique Id - 9 Unique Name - demoempone
+New Unique Id - 127 is successfully migrated to hrm_employee_td
+Old Unique Id - 10 Unique Name - demoemptwo
+New Unique Id - 128 is successfully migrated to hrm_employee_td
+Old Unique Id - 1 Unique Name - subash@integrass.com
+Old Unique Id - 2 Unique Name - ganesh1@abmcg.com
+Not Same - New Unique Id - 121 is successfully updated to hrm_employee_td
+Old Unique Id - 3 Unique Name - ganeshjai1.integrass@gmail.com
+Not Same - New Unique Id - 122 is successfully updated to hrm_employee_td
+Old Unique Id - 4 Unique Name - veera1@integrass.com
+Not Same - New Unique Id - 123 is successfully updated to hrm_employee_td
+Old Unique Id - 6 Unique Name - subash@abmcg.com
+Not Same - New Unique Id - 124 is successfully updated to hrm_employee_td
+Old Unique Id - 7 Unique Name - subash.integrass@gmail.com
+Not Same - New Unique Id - 8 is successfully updated to hrm_employee_td
+Old Unique Id - 8 Unique Name - demoemp@gmai.com
+Not Same - New Unique Id - 126 is successfully updated to hrm_employee_td
+Old Unique Id - 9 Unique Name - demoempone@gmail.com
+Not Same - New Unique Id - 127 is successfully updated to hrm_employee_td
+Old Unique Id - 10 Unique Name - demoemptwo@integrass.com
+Not Same - New Unique Id - 128 is successfully updated to hrm_employee_td

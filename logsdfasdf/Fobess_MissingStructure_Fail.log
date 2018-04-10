@@ -1,0 +1,12 @@
+Final DB - Query1 :  not executed  Table 'hrm_expense_approvelist_process' already exists
+Final DB - Query2 :  not executed  Multiple primary key defined
+Final DB - Query4 :  not executed  Duplicate column name 'emp_apply_leave_lop'
+Final DB - Query5 :  not executed  Table 'hrm_expense_history_process' already exists
+Final DB - Query6 :  not executed  Multiple primary key defined
+Final DB - Query10 :  not executed  Duplicate column name 'finance_notification'
+Final DB - Query11 :  not executed  Duplicate column name 'field_expense_limit'
+Final DB - Query12 :  not executed  Unknown column ' designation_depth' in 'hrm_emp_designation_td'
+Final DB - Query13 :  not executed  Duplicate column name 'hrm_version'
+Final DB - Query14 :  not executed  Duplicate column name 'leave_bal_det'
+Final DB - Query15 :  not executed  Duplicate column name 'leave_mon_up'
+Final DB - Query16 :  not executed  Duplicate column name 'dept_track_date'

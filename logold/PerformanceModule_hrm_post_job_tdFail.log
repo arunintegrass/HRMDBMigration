@@ -1,0 +1,1 @@
+Sub Table 2 : hrm_applicant_td not updated successfully Cannot add or update a child row: a foreign key constraint fails (`temp_fobesshrm_stage`.`hrm_applicant_td`, CONSTRAINT `hrm_applicant_td_ibfk_1` FOREIGN KEY (`job_id`) REFERENCES `hrm_post_job_td` (`job_id`) ON DELETE NO ACTION ON UPDATE NO ACTION)

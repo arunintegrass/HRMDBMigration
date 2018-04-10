@@ -1,0 +1,24 @@
+temp_integrasshrm_stage - Query5 :  not executed  Duplicate column name 'is_half_hour'
+temp_integrasshrm_stage - Query6 :  not executed  Duplicate column name 'timesheet_doc'
+temp_integrasshrm_stage - Query7 :  not executed  Duplicate column name 'leave_after_one'
+temp_integrasshrm_stage - Query8 :  not executed  Duplicate column name 'leave_bal_year'
+temp_integrasshrm_stage - Query9 :  not executed  Duplicate column name 'employee_id'
+temp_integrasshrm_stage - Query10 :  not executed  Duplicate column name 'task_show'
+temp_integrasshrm_stage - Query11 :  not executed  Duplicate column name 'is_common'
+temp_integrasshrm_stage - Query12 :  not executed  Duplicate column name 'task_show'
+temp_integrasshrm_stage - Query13 :  not executed  Unknown column ' designation_depth' in 'hrm_emp_designation_td'
+temp_integrasshrm_stage - Query1 :  not executed  Table 'demo2_integrasshrm.hrm_document_td' doesn't exist
+temp_integrasshrm_stage - Query2 :  not executed  Table 'demo2_integrasshrm.hrm_emp_personal_details_td' doesn't exist
+temp_integrasshrm_stage - Query3 :  not executed  Table 'demo2_integrasshrm.hrm_common_table' doesn't exist
+temp_integrasshrm_stage - Query4 :  not executed  Table 'demo2_integrasshrm.hrm_emp_reliving_info' doesn't exist
+temp_integrasshrm_stage - Query5 :  not executed  Table 'demo2_integrasshrm.hrm_emp_leave_td' doesn't exist
+temp_integrasshrm_stage - Query6 :  not executed  Table 'demo2_integrasshrm.hrm_emp_timesheet' doesn't exist
+temp_integrasshrm_stage - Query7 :  not executed  Table 'demo2_integrasshrm.hrm_leave_type_rule' doesn't exist
+temp_integrasshrm_stage - Query8 :  not executed  Table 'demo2_integrasshrm.hrm_leave_type_rule' doesn't exist
+temp_integrasshrm_stage - Query9 :  not executed  Table 'demo2_integrasshrm.hrm_notification_tb' doesn't exist
+temp_integrasshrm_stage - Query10 :  not executed  Table 'demo2_integrasshrm.hrm_project_map_tb' doesn't exist
+temp_integrasshrm_stage - Query11 :  not executed  Table 'demo2_integrasshrm.hrm_project_task_tb' doesn't exist
+temp_integrasshrm_stage - Query12 :  not executed  Table 'demo2_integrasshrm.hrm_project_task_tb' doesn't exist
+temp_integrasshrm_stage - Query13 :  not executed  Table 'demo2_integrasshrm.hrm_emp_designation_td' doesn't exist
+temp_integrasshrm_stage - Query14 :  not executed  Table 'demo2_integrasshrm.hrm_company_td' doesn't exist
+temp_integrasshrm_stage - Query15 :  not executed  Table 'demo2_integrasshrm.hrm_leave_type_tb' doesn't exist

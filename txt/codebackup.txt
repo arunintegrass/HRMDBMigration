@@ -1,0 +1,13 @@
+$db = mysql_select_db($dbArray['destDB'],$con);	
+
+		for($i=0;$i<count($subTableArray);$i++){
+		
+		$q1 = "SHOW KEYS FROM ".$subTableArray[$i]['tbName']." WHERE Key_name = 'PRIMARY'";
+		$s1 = mysql_query($q1);
+			while($row_id = mysql_fetch_array($s1)){
+				
+				echo $subTableArray[$i]['tbName'].' =  '. $row_id['Column_name']."<br>";
+			}
+		
+	}
+	exit;

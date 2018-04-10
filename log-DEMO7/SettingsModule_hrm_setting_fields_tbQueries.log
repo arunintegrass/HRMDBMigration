@@ -1,0 +1,428 @@
+Old Unique Id - 1 Unique Name - View Employee
+Old Unique Id - 2 Unique Name - Add Employee
+Old Unique Id - 3 Unique Name - Edit Employee
+Old Unique Id - 4 Unique Name - Delete Employee
+Old Unique Id - 5 Unique Name - Import Employee
+Old Unique Id - 6 Unique Name - Leave Approvals
+New Unique Id - 169 is successfully migrated to hrm_setting_fields_tb
+Old Unique Id - 7 Unique Name - Add Holiday
+Old Unique Id - 8 Unique Name - View Paystubs
+Old Unique Id - 9 Unique Name - Add Paystubs
+Old Unique Id - 10 Unique Name - Edit Paystubs
+New Unique Id - 170 is successfully migrated to hrm_setting_fields_tb
+Old Unique Id - 11 Unique Name - Print Paystubs
+Old Unique Id - 12 Unique Name - Add Paygrade
+Old Unique Id - 13 Unique Name - Edit Paygrade
+Old Unique Id - 14 Unique Name - Customize Paygrade
+Old Unique Id - 15 Unique Name - Delete Paygrade
+Old Unique Id - 16 Unique Name - Edit Organization Info
+Old Unique Id - 17 Unique Name - Add Branches
+Old Unique Id - 18 Unique Name - Edit Branches
+Old Unique Id - 19 Unique Name - Delete Branches
+Old Unique Id - 20 Unique Name - Employee Report
+Old Unique Id - 21 Unique Name - Leave Report
+Old Unique Id - 22 Unique Name - Applicant Report
+Old Unique Id - 23 Unique Name - Performance Report
+Old Unique Id - 24 Unique Name - KPI Report
+Old Unique Id - 25 Unique Name - View Vacancies
+Old Unique Id - 26 Unique Name - Add Vacancies
+Old Unique Id - 27 Unique Name - Edit Vacancies
+Old Unique Id - 28 Unique Name - Vacancy Status
+Old Unique Id - 29 Unique Name - Applicant Form
+Old Unique Id - 30 Unique Name - View Applicant
+Old Unique Id - 31 Unique Name - View Profile
+Old Unique Id - 32 Unique Name - Applicant Status
+Old Unique Id - 33 Unique Name - View Performance
+Old Unique Id - 34 Unique Name - Add Review
+Old Unique Id - 35 Unique Name - Edit Review
+Old Unique Id - 36 Unique Name - Delete Review
+Old Unique Id - 37 Unique Name - View KPI
+Old Unique Id - 38 Unique Name - Add KPI
+Old Unique Id - 39 Unique Name - Edit KPI
+Old Unique Id - 40 Unique Name - Delete KPI
+Old Unique Id - 41 Unique Name - Clone KPI
+Old Unique Id - 42 Unique Name - View Events
+Old Unique Id - 43 Unique Name - Add Events
+Old Unique Id - 44 Unique Name - Edit Events
+Old Unique Id - 45 Unique Name - Delete Events
+Old Unique Id - 46 Unique Name - General Settings View
+Old Unique Id - 47 Unique Name - General Settings Edit
+Old Unique Id - 48 Unique Name - Position Settings View
+Old Unique Id - 49 Unique Name - Position Settings Add
+Old Unique Id - 50 Unique Name - Department View
+Old Unique Id - 51 Unique Name - Department Add
+Old Unique Id - 52 Unique Name - Department Edit
+Old Unique Id - 53 Unique Name - Department Delete
+Old Unique Id - 54 Unique Name - Designation View
+Old Unique Id - 55 Unique Name - Designation Add
+Old Unique Id - 56 Unique Name - Designation Edit
+Old Unique Id - 57 Unique Name - Designation Delete
+Old Unique Id - 58 Unique Name - Employment Type View
+Old Unique Id - 59 Unique Name - Employment Type Add
+Old Unique Id - 60 Unique Name - Employment Type Edit
+Old Unique Id - 61 Unique Name - Employment Type Delete
+Old Unique Id - 62 Unique Name - Leave Type View
+Not Same - New Unique Id - 130 is successfully updated to hrm_setting_fields_tb
+Old Unique Id - 63 Unique Name - Leave Type Add
+Old Unique Id - 64 Unique Name - Leave Type Edit
+Old Unique Id - 65 Unique Name - Leave Type Delete
+Old Unique Id - 66 Unique Name - Grade View
+Old Unique Id - 67 Unique Name - Grade Add
+Old Unique Id - 68 Unique Name - Grade Edit
+Old Unique Id - 69 Unique Name - Grade Delete
+Old Unique Id - 70 Unique Name - Probation Period View
+Old Unique Id - 71 Unique Name - Probation Period Add
+Old Unique Id - 72 Unique Name - Probation Period Edit
+Old Unique Id - 73 Unique Name - Probation Period Delete
+Old Unique Id - 74 Unique Name - User Permissions
+Old Unique Id - 75 Unique Name - Designation Permissions
+Old Unique Id - 76 Unique Name - Group Permission View
+Old Unique Id - 77 Unique Name - Group Permission Add
+Old Unique Id - 78 Unique Name - Group Permission Edit
+Old Unique Id - 79 Unique Name - Group Permission Delete
+Old Unique Id - 80 Unique Name - Edit Holiday
+Old Unique Id - 81 Unique Name - Delete Holiday
+Old Unique Id - 82 Unique Name - Clone Paystubs
+New Unique Id - 171 is successfully migrated to hrm_setting_fields_tb
+Old Unique Id - 83 Unique Name - Bulk Generation
+Old Unique Id - 84 Unique Name - Add Other User Leave
+New Unique Id - 172 is successfully migrated to hrm_setting_fields_tb
+Old Unique Id - 85 Unique Name - Upload Document
+Old Unique Id - 86 Unique Name - Edit Documents
+Old Unique Id - 87 Unique Name - Delete Documents
+Old Unique Id - 88 Unique Name - Add Custom Message
+Old Unique Id - 89 Unique Name - Edit Custom Message
+Old Unique Id - 90 Unique Name - Delete Custom Message
+Old Unique Id - 91 Unique Name - View Timesheet
+Not Same - New Unique Id - 107 is successfully updated to hrm_setting_fields_tb
+Old Unique Id - 92 Unique Name - Edit Timesheet
+Not Same - New Unique Id - 108 is successfully updated to hrm_setting_fields_tb
+Old Unique Id - 93 Unique Name - Approve Timesheet
+New Unique Id - 173 is successfully migrated to hrm_setting_fields_tb
+Old Unique Id - 94 Unique Name - Timesheet Report
+Not Same - New Unique Id - 128 is successfully updated to hrm_setting_fields_tb
+Old Unique Id - 95 Unique Name - Add Project
+Not Same - New Unique Id - 109 is successfully updated to hrm_setting_fields_tb
+Old Unique Id - 96 Unique Name - View Project
+Not Same - New Unique Id - 110 is successfully updated to hrm_setting_fields_tb
+Old Unique Id - 97 Unique Name - Edit Project
+Not Same - New Unique Id - 111 is successfully updated to hrm_setting_fields_tb
+Old Unique Id - 98 Unique Name - Delete Project
+Not Same - New Unique Id - 129 is successfully updated to hrm_setting_fields_tb
+Old Unique Id - 99 Unique Name - Project Report
+Not Same - New Unique Id - 127 is successfully updated to hrm_setting_fields_tb
+Old Unique Id - 100 Unique Name - Project  Task Add
+New Unique Id - 174 is successfully migrated to hrm_setting_fields_tb
+Old Unique Id - 101 Unique Name - Project  Task Edit
+New Unique Id - 175 is successfully migrated to hrm_setting_fields_tb
+Old Unique Id - 102 Unique Name - Project  Task Delete
+New Unique Id - 176 is successfully migrated to hrm_setting_fields_tb
+Old Unique Id - 103 Unique Name - Client View
+Not Same - New Unique Id - 135 is successfully updated to hrm_setting_fields_tb
+Old Unique Id - 104 Unique Name - Client  Add
+New Unique Id - 177 is successfully migrated to hrm_setting_fields_tb
+Old Unique Id - 105 Unique Name - Client  Edit
+New Unique Id - 178 is successfully migrated to hrm_setting_fields_tb
+Old Unique Id - 106 Unique Name - Client  Delete
+New Unique Id - 179 is successfully migrated to hrm_setting_fields_tb
+Old Unique Id - 107 Unique Name - Project  Assign Task  View
+New Unique Id - 180 is successfully migrated to hrm_setting_fields_tb
+Old Unique Id - 108 Unique Name - Project  Assign Task  Add
+New Unique Id - 181 is successfully migrated to hrm_setting_fields_tb
+Old Unique Id - 109 Unique Name - Project  Assign Task  Delete
+New Unique Id - 182 is successfully migrated to hrm_setting_fields_tb
+Old Unique Id - 110 Unique Name - Project  Assign Task  Edit
+New Unique Id - 183 is successfully migrated to hrm_setting_fields_tb
+Old Unique Id - 111 Unique Name - Project Task View
+Not Same - New Unique Id - 132 is successfully updated to hrm_setting_fields_tb
+Old Unique Id - 112 Unique Name - Category Type View
+Not Same - New Unique Id - 103 is successfully updated to hrm_setting_fields_tb
+Old Unique Id - 113 Unique Name - Category Type Add
+Not Same - New Unique Id - 104 is successfully updated to hrm_setting_fields_tb
+Old Unique Id - 114 Unique Name - Category Type Edit
+Not Same - New Unique Id - 105 is successfully updated to hrm_setting_fields_tb
+Old Unique Id - 115 Unique Name - Category Type Delete
+Not Same - New Unique Id - 106 is successfully updated to hrm_setting_fields_tb
+Old Unique Id - 116 Unique Name - SubCategory Type Delete
+Not Same - New Unique Id - 112 is successfully updated to hrm_setting_fields_tb
+Old Unique Id - 117 Unique Name - SubCategory Type Edit
+Not Same - New Unique Id - 113 is successfully updated to hrm_setting_fields_tb
+Old Unique Id - 118 Unique Name - SubCategory Type Add
+Not Same - New Unique Id - 114 is successfully updated to hrm_setting_fields_tb
+Old Unique Id - 119 Unique Name - SubCategory Type View
+Not Same - New Unique Id - 115 is successfully updated to hrm_setting_fields_tb
+Old Unique Id - 122 Unique Name - Expense Report
+Not Same - New Unique Id - 116 is successfully updated to hrm_setting_fields_tb
+Old Unique Id - 142 Unique Name - Add Newsletter
+Not Same - New Unique Id - 144 is successfully updated to hrm_setting_fields_tb
+Old Unique Id - 143 Unique Name - Delete Newsletter
+Not Same - New Unique Id - 147 is successfully updated to hrm_setting_fields_tb
+Old Unique Id - 144 Unique Name - Add Discount
+Not Same - New Unique Id - 145 is successfully updated to hrm_setting_fields_tb
+Old Unique Id - 145 Unique Name - Delete Discount
+Not Same - New Unique Id - 146 is successfully updated to hrm_setting_fields_tb
+Old Unique Id - 146 Unique Name - View Cart Product
+Not Same - New Unique Id - 140 is successfully updated to hrm_setting_fields_tb
+Old Unique Id - 147 Unique Name - Add Cart Product
+Not Same - New Unique Id - 141 is successfully updated to hrm_setting_fields_tb
+Old Unique Id - 148 Unique Name - Edit Cart Product
+Not Same - New Unique Id - 142 is successfully updated to hrm_setting_fields_tb
+Old Unique Id - 149 Unique Name - Delete Cart Product
+Not Same - New Unique Id - 143 is successfully updated to hrm_setting_fields_tb
+Old Unique Id - 150 Unique Name - View Cart Category
+Not Same - New Unique Id - 136 is successfully updated to hrm_setting_fields_tb
+Old Unique Id - 151 Unique Name - Add Cart Category
+Not Same - New Unique Id - 137 is successfully updated to hrm_setting_fields_tb
+Old Unique Id - 152 Unique Name - Edit Cart Category
+Not Same - New Unique Id - 138 is successfully updated to hrm_setting_fields_tb
+Old Unique Id - 153 Unique Name - Delete Cart Category
+Not Same - New Unique Id - 139 is successfully updated to hrm_setting_fields_tb
+Old Unique Id - 154 Unique Name - Add Rewards Points
+Not Same - New Unique Id - 149 is successfully updated to hrm_setting_fields_tb
+Old Unique Id - 155 Unique Name - Cart Notification
+Not Same - New Unique Id - 148 is successfully updated to hrm_setting_fields_tb
+Old Unique Id - 156 Unique Name - General Settings Date Format
+Not Same - New Unique Id - 154 is successfully updated to hrm_setting_fields_tb
+Old Unique Id - 157 Unique Name - BirthDay Notification Alert
+Not Same - New Unique Id - 150 is successfully updated to hrm_setting_fields_tb
+Old Unique Id - 158 Unique Name - Visa Notification Alert
+Not Same - New Unique Id - 151 is successfully updated to hrm_setting_fields_tb
+Old Unique Id - 159 Unique Name - Anniversary Notification Alert
+Not Same - New Unique Id - 152 is successfully updated to hrm_setting_fields_tb
+Old Unique Id - 160 Unique Name - Probation Notification Alert
+Not Same - New Unique Id - 153 is successfully updated to hrm_setting_fields_tb
+Old Unique Id - 161 Unique Name - Verify Expense
+Not Same - New Unique Id - 156 is successfully updated to hrm_setting_fields_tb
+Old Unique Id - 162 Unique Name - Expense Approval
+Not Same - New Unique Id - 157 is successfully updated to hrm_setting_fields_tb
+Old Unique Id - 163 Unique Name - Add Employee Expense
+Not Same - New Unique Id - 158 is successfully updated to hrm_setting_fields_tb
+Old Unique Id - 164 Unique Name - Leave Notification
+Not Same - New Unique Id - 160 is successfully updated to hrm_setting_fields_tb
+Old Unique Id - 165 Unique Name - Payroll Report
+Not Same - New Unique Id - 162 is successfully updated to hrm_setting_fields_tb
+Old Unique Id - 166 Unique Name - General Settings Payroll Date
+Not Same - New Unique Id - 163 is successfully updated to hrm_setting_fields_tb
+Old Unique Id - 168 Unique Name - Edit Employee Leave Entity
+Not Same - New Unique Id - 165 is successfully updated to hrm_setting_fields_tb
+Old Unique Id - 169 Unique Name - Timesheet Settings
+Not Same - New Unique Id - 166 is successfully updated to hrm_setting_fields_tb
+Old Unique Id - 170 Unique Name - Add Employee Timesheet
+Not Same - New Unique Id - 167 is successfully updated to hrm_setting_fields_tb
+Old Unique Id - 171 Unique Name - Verify Timesheet
+New Unique Id - 184 is successfully migrated to hrm_setting_fields_tb
+Old Unique Id - 172 Unique Name - View Employee Leave Entity
+Not Same - New Unique Id - 164 is successfully updated to hrm_setting_fields_tb
+Old Unique Id - 1 Unique Name - view_employee
+Old Unique Id - 2 Unique Name - add_employee
+Old Unique Id - 3 Unique Name - edit_employee
+Old Unique Id - 4 Unique Name - delete_employee
+Old Unique Id - 5 Unique Name - import_employee
+Old Unique Id - 6 Unique Name - leave_approvals
+Old Unique Id - 7 Unique Name - add_holiday
+Old Unique Id - 8 Unique Name - view_paystubs
+Old Unique Id - 9 Unique Name - add_paystubs
+Old Unique Id - 10 Unique Name - edit_paystubs
+New Unique Id - 169 is successfully migrated to hrm_setting_fields_tb
+Old Unique Id - 11 Unique Name - print_paystubs
+Old Unique Id - 12 Unique Name - add_paygrade
+Old Unique Id - 13 Unique Name - edit_paygrade
+Old Unique Id - 14 Unique Name - customize_paygrade
+Old Unique Id - 15 Unique Name - delete_paygrade
+Old Unique Id - 16 Unique Name - edit_organization_info
+Old Unique Id - 17 Unique Name - add_branches
+Old Unique Id - 18 Unique Name - edit_branches
+Old Unique Id - 19 Unique Name - delete_branches
+Old Unique Id - 20 Unique Name - employee_report
+Old Unique Id - 21 Unique Name - leave_report
+Old Unique Id - 22 Unique Name - applicant_report
+Old Unique Id - 23 Unique Name - performance_report
+Old Unique Id - 24 Unique Name - kpi_report
+Old Unique Id - 25 Unique Name - view_vacancies
+Old Unique Id - 26 Unique Name - add_vacancies
+Old Unique Id - 27 Unique Name - edit_vacancies
+Old Unique Id - 28 Unique Name - vacancy_status
+Old Unique Id - 29 Unique Name - applicant_form
+Old Unique Id - 30 Unique Name - view_applicant
+Old Unique Id - 31 Unique Name - view_profile
+Old Unique Id - 32 Unique Name - applicant_status
+Old Unique Id - 33 Unique Name - view_performance
+Old Unique Id - 34 Unique Name - add_review
+Old Unique Id - 35 Unique Name - edit_review
+Old Unique Id - 36 Unique Name - delete_review
+Old Unique Id - 37 Unique Name - view_kpi
+Old Unique Id - 38 Unique Name - add_kpi
+Old Unique Id - 39 Unique Name - edit_kpi
+Old Unique Id - 40 Unique Name - delete_kpi
+Old Unique Id - 41 Unique Name - clone_kpi
+Old Unique Id - 42 Unique Name - events_view
+Old Unique Id - 43 Unique Name - add_events
+Old Unique Id - 44 Unique Name - edit_events
+Old Unique Id - 45 Unique Name - delete_events
+Old Unique Id - 46 Unique Name - general_settings_view
+Old Unique Id - 47 Unique Name - general_settings_edit
+Old Unique Id - 48 Unique Name - position_settings_view
+Old Unique Id - 49 Unique Name - position_settings_add
+Old Unique Id - 50 Unique Name - department_view
+Old Unique Id - 51 Unique Name - department_add
+Old Unique Id - 52 Unique Name - department_edit
+Old Unique Id - 53 Unique Name - department_delete
+Old Unique Id - 54 Unique Name - designation_view
+Old Unique Id - 55 Unique Name - designation_add
+Old Unique Id - 56 Unique Name - designation_edit
+Old Unique Id - 57 Unique Name - designation_delete
+Old Unique Id - 58 Unique Name - employment_type_view
+Old Unique Id - 59 Unique Name - employment_type_add
+Old Unique Id - 60 Unique Name - employment_type_edit
+Old Unique Id - 61 Unique Name - employment_type_delete
+Old Unique Id - 62 Unique Name - leave_type_view
+Not Same - New Unique Id - 130 is successfully updated to hrm_setting_fields_tb
+Old Unique Id - 63 Unique Name - leave_type_add
+Old Unique Id - 64 Unique Name - leave_type_edit
+Old Unique Id - 65 Unique Name - leave_type_delete
+Old Unique Id - 66 Unique Name - grade_view
+Old Unique Id - 67 Unique Name - grade_add
+Old Unique Id - 68 Unique Name - grade_edit
+Old Unique Id - 69 Unique Name - grade_delete
+Old Unique Id - 70 Unique Name - probation_period_view
+Old Unique Id - 71 Unique Name - probation_period_add
+Old Unique Id - 72 Unique Name - probation_period_edit
+Old Unique Id - 73 Unique Name - probation_period_delete
+Old Unique Id - 74 Unique Name - user_permissions
+Old Unique Id - 75 Unique Name - designation_permissions
+Old Unique Id - 76 Unique Name - group_permission_view
+Old Unique Id - 77 Unique Name - group_permission_add
+Old Unique Id - 78 Unique Name - group_permission_edit
+Old Unique Id - 79 Unique Name - group_permission_delete
+Old Unique Id - 80 Unique Name - edit_holiday
+Old Unique Id - 81 Unique Name - delete_holiday
+Old Unique Id - 82 Unique Name - clone_paystubs
+New Unique Id - 170 is successfully migrated to hrm_setting_fields_tb
+Old Unique Id - 83 Unique Name - bulk_generation
+Old Unique Id - 84 Unique Name - add_other_user_leave
+Old Unique Id - 85 Unique Name - upload_document
+Old Unique Id - 86 Unique Name - edit_documents
+Old Unique Id - 87 Unique Name - delete_documents
+Old Unique Id - 88 Unique Name - add_custom_message
+Old Unique Id - 89 Unique Name - edit_custom_message
+Old Unique Id - 90 Unique Name - delete_custom_message
+Old Unique Id - 91 Unique Name - view_timesheet
+Not Same - New Unique Id - 107 is successfully updated to hrm_setting_fields_tb
+Old Unique Id - 92 Unique Name - edit_timesheet
+Not Same - New Unique Id - 108 is successfully updated to hrm_setting_fields_tb
+Old Unique Id - 93 Unique Name - apporve_timesheet
+Not Same - New Unique Id - 125 is successfully updated to hrm_setting_fields_tb
+Old Unique Id - 94 Unique Name - timesheet_report
+Not Same - New Unique Id - 128 is successfully updated to hrm_setting_fields_tb
+Old Unique Id - 95 Unique Name - add_project
+Not Same - New Unique Id - 109 is successfully updated to hrm_setting_fields_tb
+Old Unique Id - 96 Unique Name - view_project
+Not Same - New Unique Id - 110 is successfully updated to hrm_setting_fields_tb
+Old Unique Id - 97 Unique Name - edit_project
+Not Same - New Unique Id - 111 is successfully updated to hrm_setting_fields_tb
+Old Unique Id - 98 Unique Name - delete_project
+Not Same - New Unique Id - 129 is successfully updated to hrm_setting_fields_tb
+Old Unique Id - 99 Unique Name - project_report
+Not Same - New Unique Id - 127 is successfully updated to hrm_setting_fields_tb
+Old Unique Id - 100 Unique Name - add_task
+Not Same - New Unique Id - 119 is successfully updated to hrm_setting_fields_tb
+Old Unique Id - 101 Unique Name - edit_task
+Not Same - New Unique Id - 120 is successfully updated to hrm_setting_fields_tb
+Old Unique Id - 102 Unique Name - delete_task
+Not Same - New Unique Id - 121 is successfully updated to hrm_setting_fields_tb
+Old Unique Id - 103 Unique Name - view_client
+Not Same - New Unique Id - 135 is successfully updated to hrm_setting_fields_tb
+Old Unique Id - 104 Unique Name - add_client
+Not Same - New Unique Id - 122 is successfully updated to hrm_setting_fields_tb
+Old Unique Id - 105 Unique Name - edit_client
+Not Same - New Unique Id - 123 is successfully updated to hrm_setting_fields_tb
+Old Unique Id - 106 Unique Name - delete_client
+Not Same - New Unique Id - 124 is successfully updated to hrm_setting_fields_tb
+Old Unique Id - 107 Unique Name - project_assign_task_view
+Not Same - New Unique Id - 134 is successfully updated to hrm_setting_fields_tb
+Old Unique Id - 108 Unique Name - project_assign_task_add
+Not Same - New Unique Id - 126 is successfully updated to hrm_setting_fields_tb
+Old Unique Id - 109 Unique Name - project_assign_task_delete
+Not Same - New Unique Id - 131 is successfully updated to hrm_setting_fields_tb
+Old Unique Id - 110 Unique Name - project_assign_task_edit
+Not Same - New Unique Id - 133 is successfully updated to hrm_setting_fields_tb
+Old Unique Id - 111 Unique Name - view_task
+Not Same - New Unique Id - 132 is successfully updated to hrm_setting_fields_tb
+Old Unique Id - 112 Unique Name - category_type_view
+Not Same - New Unique Id - 103 is successfully updated to hrm_setting_fields_tb
+Old Unique Id - 113 Unique Name - category_type_add
+Not Same - New Unique Id - 104 is successfully updated to hrm_setting_fields_tb
+Old Unique Id - 114 Unique Name - category_type_edit
+Not Same - New Unique Id - 105 is successfully updated to hrm_setting_fields_tb
+Old Unique Id - 115 Unique Name - category_type_delete
+Not Same - New Unique Id - 106 is successfully updated to hrm_setting_fields_tb
+Old Unique Id - 116 Unique Name - subcategory_type_delete
+Not Same - New Unique Id - 112 is successfully updated to hrm_setting_fields_tb
+Old Unique Id - 117 Unique Name - subcategory_type_edit
+Not Same - New Unique Id - 113 is successfully updated to hrm_setting_fields_tb
+Old Unique Id - 118 Unique Name - subcategory_type_add
+Not Same - New Unique Id - 114 is successfully updated to hrm_setting_fields_tb
+Old Unique Id - 119 Unique Name - subcategory_type_view
+Not Same - New Unique Id - 115 is successfully updated to hrm_setting_fields_tb
+Old Unique Id - 122 Unique Name - expense_report
+Not Same - New Unique Id - 116 is successfully updated to hrm_setting_fields_tb
+Old Unique Id - 142 Unique Name - add_newletterevents
+Not Same - New Unique Id - 144 is successfully updated to hrm_setting_fields_tb
+Old Unique Id - 143 Unique Name - delete_newletterevents
+Not Same - New Unique Id - 147 is successfully updated to hrm_setting_fields_tb
+Old Unique Id - 144 Unique Name - add_discount
+Not Same - New Unique Id - 145 is successfully updated to hrm_setting_fields_tb
+Old Unique Id - 145 Unique Name - delete_discount
+Not Same - New Unique Id - 146 is successfully updated to hrm_setting_fields_tb
+Old Unique Id - 146 Unique Name - view_cart_product
+Not Same - New Unique Id - 140 is successfully updated to hrm_setting_fields_tb
+Old Unique Id - 147 Unique Name - add_cart_product
+Not Same - New Unique Id - 141 is successfully updated to hrm_setting_fields_tb
+Old Unique Id - 148 Unique Name - edit_cart_product
+Not Same - New Unique Id - 142 is successfully updated to hrm_setting_fields_tb
+Old Unique Id - 149 Unique Name - delete_cart_product
+Not Same - New Unique Id - 143 is successfully updated to hrm_setting_fields_tb
+Old Unique Id - 150 Unique Name - view_cart_category
+Not Same - New Unique Id - 136 is successfully updated to hrm_setting_fields_tb
+Old Unique Id - 151 Unique Name - add_cart_category
+Not Same - New Unique Id - 137 is successfully updated to hrm_setting_fields_tb
+Old Unique Id - 152 Unique Name - edit_cart_category
+Not Same - New Unique Id - 138 is successfully updated to hrm_setting_fields_tb
+Old Unique Id - 153 Unique Name - delete_cart_category
+Not Same - New Unique Id - 139 is successfully updated to hrm_setting_fields_tb
+Old Unique Id - 154 Unique Name - add_rewards_points
+Not Same - New Unique Id - 149 is successfully updated to hrm_setting_fields_tb
+Old Unique Id - 155 Unique Name - cart_notification
+Not Same - New Unique Id - 148 is successfully updated to hrm_setting_fields_tb
+Old Unique Id - 156 Unique Name - general_settings_date_format
+Not Same - New Unique Id - 154 is successfully updated to hrm_setting_fields_tb
+Old Unique Id - 157 Unique Name - birthday_notification_alert
+Not Same - New Unique Id - 150 is successfully updated to hrm_setting_fields_tb
+Old Unique Id - 158 Unique Name - visa_notification_alert
+Not Same - New Unique Id - 151 is successfully updated to hrm_setting_fields_tb
+Old Unique Id - 159 Unique Name - anniversery_notification_alert
+Not Same - New Unique Id - 152 is successfully updated to hrm_setting_fields_tb
+Old Unique Id - 160 Unique Name - probation_notification_alert
+Not Same - New Unique Id - 153 is successfully updated to hrm_setting_fields_tb
+Old Unique Id - 161 Unique Name - verify_expense
+Not Same - New Unique Id - 156 is successfully updated to hrm_setting_fields_tb
+Old Unique Id - 162 Unique Name - approve_expense
+Not Same - New Unique Id - 157 is successfully updated to hrm_setting_fields_tb
+Old Unique Id - 163 Unique Name - add_employee_expense
+Not Same - New Unique Id - 158 is successfully updated to hrm_setting_fields_tb
+Old Unique Id - 164 Unique Name - leave_notification
+Not Same - New Unique Id - 160 is successfully updated to hrm_setting_fields_tb
+Old Unique Id - 165 Unique Name - payroll_report
+Not Same - New Unique Id - 162 is successfully updated to hrm_setting_fields_tb
+Old Unique Id - 166 Unique Name - general_settings_payroll_date
+Not Same - New Unique Id - 163 is successfully updated to hrm_setting_fields_tb
+Old Unique Id - 168 Unique Name - edit_emp_leave_entity
+Not Same - New Unique Id - 165 is successfully updated to hrm_setting_fields_tb
+Old Unique Id - 169 Unique Name - timesheet_settings
+Not Same - New Unique Id - 166 is successfully updated to hrm_setting_fields_tb
+Old Unique Id - 170 Unique Name - add_employee_timesheet
+Not Same - New Unique Id - 167 is successfully updated to hrm_setting_fields_tb
+Old Unique Id - 171 Unique Name - verify_timesheet
+Not Same - New Unique Id - 168 is successfully updated to hrm_setting_fields_tb
+Old Unique Id - 172 Unique Name - view_emp_leave_entity
+Not Same - New Unique Id - 164 is successfully updated to hrm_setting_fields_tb

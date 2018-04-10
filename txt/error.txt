@@ -1,0 +1,218 @@
+
+Bug 1 :	MISSING IN integrasshrm_stage
+	Sub Table 5 : hrm_document_td not migrated successfully Column count doesn't match value count at row 1 
+ remedie :
+	
+	ALTER TABLE `integrasshrm_stage.hrm_document_td` ADD `view_type` INT NOT NULL AFTER `doc_flag`;
+
+Bug 2 :	MISSING IN integrasshrm_stage
+	Sub Table 13 : hrm_emp_personal_details_td not migrated successfully Column count doesn't match value count at row 1 
+ remedie :
+ 
+	ALTER TABLE `integrasshrm_stage.hrm_emp_personal_details_td` ADD `marriage_date` DATE NOT NULL AFTER `flag`;
+
+Bug 3 : MISSING IN integrasshrm_stage
+ remedie : 
+ 
+	ALTER TABLE `integrasshrm_stage.hrm_common_table` ADD `notification` INT NOT NULL AFTER `field_flag`, ADD `menu_config` INT NOT NULL AFTER `notification`;
+
+Bug 4 :	MISSING IN 	integrasshrm_stage
+	hrm_emp_checklist is missing 	
+ remedie : 	 
+		Not necessary = Only in Fobess not able to do in integrasshrm_stage 
+	
+	
+Bug 5 :	MISSING IN integrasshrm_stage
+Sub Table 15 : hrm_emp_reliving_info not migrated successfully Column count doesn't match value count at row 1 
+ remedie : 	 
+ 
+  ALTER TABLE `integrasshrm_stage.hrm_emp_reliving_info`
+	  ADD `relocation` text NOT NULL AFTER `terminated_date`,
+	  ADD `notice_period` text NOT NULL AFTER `relocation`,
+	  ADD `breach_of_contract` text NOT NULL AFTER `notice_period`,
+	  ADD `req_cancellation_company_email` date NOT NULL DEFAULT '0000-00-00' AFTER `breach_of_contract`,
+	  ADD `k_enrollment_form` date NOT NULL DEFAULT '0000-00-00' AFTER `req_cancellation_company_email`,
+	  ADD `national_general_benifits` date NOT NULL DEFAULT '0000-00-00' AFTER `k_enrollment_form`,
+	  ADD `principal` date NOT NULL DEFAULT '0000-00-00' AFTER `national_general_benifits`,
+	  ADD `terminated_paycheck` date NOT NULL AFTER `principal`,
+	  ADD `terminated_hrm` date NOT NULL DEFAULT '0000-00-00' AFTER `terminated_paycheck`,
+	  ADD `terminated_unum_coverage` date NOT NULL DEFAULT '0000-00-00' AFTER `terminated_hrm`,
+	  ADD `terminated_employee_close_file` date NOT NULL DEFAULT '0000-00-00' AFTER `terminated_unum_coverage`,
+	  ADD `employee_cancellation_document` date NOT NULL DEFAULT '0000-00-00' AFTER `terminated_employee_close_file`,
+	  ADD `offer_letter_and_employee_agreement` date NOT NULL DEFAULT '0000-00-00' AFTER `employee_cancellation_document`,
+	  ADD `cancellation_emp_type` date NOT NULL DEFAULT '0000-00-00' AFTER `offer_letter_and_employee_agreement`;
+
+	  
+Bug 6 :	MISSING IN fobesshrm_stage
+	Sub Table 21 : hrm_expense_approvelist_process not migrated successfully Table 'temp_fobesshrm_stage.hrm_expense_approvelist_process' doesn't exist 
+ remedie : 	 
+
+	CREATE TABLE `fobesshrm_stage.hrm_expense_approvelist_process` (
+	  `tracking_id` int(11) NOT NULL,
+	  `action_type` int(11) NOT NULL,
+	  `payment_method` text,
+	  `date_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+	  `payment_description` text,
+	  `history_process_flag` int(11) NOT NULL,
+	  `approval_status` int(11) NOT NULL,
+	  `employee_id` int(11) NOT NULL,
+	  `payment_date` text,
+	  `history_process_id` int(11) NOT NULL
+	) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+	ALTER TABLE `hrm_expense_approvelist_process`
+	  ADD PRIMARY KEY (`history_process_id`);
+	ALTER TABLE `hrm_expense_approvelist_process`
+	  MODIFY `history_process_id` int(11) NOT NULL AUTO_INCREMENT;COMMIT;
+	  
+	 
+Bug 7 :	MISSING IN integrasshrm_stage
+	Sub Table 33 : keys not migrated successfully Table 'integrasshrm_stage.keys' doesn't exist 
+ remedie : 	  
+	Migration Script Array is commented 
+ 
+ 
+Bug 8 :	MISSING IN integrasshrm_stage
+	 Sub Table 34 : logs not migrated successfully Table 'integrasshrm_stage.logs' doesn't exist 
+ remedie : 	   
+	Migration Script Array is commented 
+ 
+ 
+Bug 9 :	MISSING IN integrasshrm_stage
+	Sub Table 11 : hrm_emp_leave_td not migrated successfully Column count doesn't match value count at row 1 
+  remedie : 	 is_half_hour column is missing
+		
+		ALTER TABLE `integrasshrm_stage.hrm_emp_leave_td` ADD `is_half_hour` INT(11) NOT NULL AFTER `cancel_reason`;
+ 
+Bug 10 :	MISSING IN integrasshrm_stage
+	Sub Table 19 : hrm_emp_timesheet not migrated successfully Column count doesn't match value count at row 1 
+  remedie : 	 
+			timesheet_doc  column is missing
+			timesheet_adate column is missing
+			
+		ALTER TABLE `integrasshrm_stage.hrm_emp_timesheet` ADD `timesheet_doc` VARCHAR(255) NOT NULL AFTER `week_no`, ADD `timesheet_adate` DATETIME NOT NULL AFTER `timesheet_doc`;
+  
+   
+Bug 11 :	MISSING IN 
+	Sub Table 23 : hrm_leave_type_rule not migrated successfully Column count doesn't match value count at row 1
+  remedie : 	 
+  leave_after_one	MISSING IN 	integrasshrm_stage
+  leave_bal_year	MISSING IN 	integrasshrm_stage
+  emp_apply_leave_lop	MISSING IN 	fobesshrm_stage
+  
+		ALTER TABLE `integrasshrm_stage.hrm_leave_type_rule` ADD `leave_after_one` INT(11) NOT NULL AFTER `leave_mini_opt_days`;
+		ALTER TABLE `integrasshrm_stage.hrm_leave_type_rule` ADD `leave_bal_year` INT(11) NOT NULL AFTER `attachment_mand`;
+		ALTER TABLE `fobesshrm_stage.hrm_leave_type_rule` ADD `emp_apply_leave_lop` INT(11) NOT NULL AFTER `status`;
+  
+  
+Bug 12 :	MISSING IN 
+	Sub Table 24 : hrm_notification_tb not migrated successfully Column count doesn't match value count at row 1 
+  remedie : 	 
+		employee_id   MISSING IN 	integrasshrm_stage
+		
+		ALTER TABLE `integrasshrm_stage.hrm_notification_tb` ADD `employee_id` INT(11) NOT NULL AFTER `ref_status`;
+		
+ 
+Bug 13 :	MISSING IN 
+	Sub Table 29 : hrm_project_map_tb not migrated successfully Column count doesn't match value count at row 1 
+  remedie : 	   
+		task_show   MISSING IN 	integrasshrm_stage
+		ALTER TABLE `integrasshrm_stage.hrm_project_map_tb` ADD `task_show` INT(11) NOT NULL AFTER `date`;
+		
+ 
+Bug 14 :	MISSING IN 
+	Sub Table 30 : hrm_project_task_tb not migrated successfully Column count doesn't match value count at row 1 
+ remedie : 	 
+		is_common   MISSING IN 	integrasshrm_stage
+		task_show   MISSING IN 	integrasshrm_stage
+	ALTER TABLE `integrasshrm_stage.hrm_project_task_tb` ADD `is_common` INT(11) NOT NULL AFTER `task_status`;
+	ALTER TABLE `integrasshrm_stage.hrm_project_task_tb` ADD `task_show` INT(11) NOT NULL AFTER `task_flag`;
+ 
+ 
+Sub Table 3 : hrm_emp_exp_td not migrated successfully Duplicate entry '0' for key 'PRIMARY'
+ remedie : 	 
+ALTER TABLE `hrm_emp_exp_td` MODIFY COLUMN `expense_id` INT AUTO_INCREMENT;
+
+Sub Table 8 : hrm_document_td not migrated successfully Duplicate entry '0' for key 'PRIMARY'
+ remedie : 	 
+ ALTER TABLE `hrm_document_td` MODIFY COLUMN `doc_id` INT AUTO_INCREMENT;
+ 
+Sub Table 9 : hrm_emp_contact_td not migrated successfully Duplicate entry '0' for key 'PRIMARY'
+ remedie : 	 
+ ALTER TABLE `hrm_emp_contact_td` MODIFY COLUMN `emp_contact_id` INT AUTO_INCREMENT;
+ 
+Sub Table 10 : hrm_emp_education_td not migrated successfully Duplicate entry '0' for key 'PRIMARY'
+ remedie : 	 
+ ALTER TABLE `hrm_emp_education_td` MODIFY COLUMN `emp_education_id` INT AUTO_INCREMENT;
+ 
+Sub Table 11 : hrm_emp_experience_tb not migrated successfully Duplicate entry '0' for key 'PRIMARY'
+ remedie : 	 
+ ALTER TABLE `hrm_emp_experience_tb` MODIFY COLUMN `emp_experience_id` INT AUTO_INCREMENT;
+ 
+Sub Table 14 : hrm_emp_official_info_tb not migrated successfully Duplicate entry '0' for key 'PRIMARY'
+ remedie : 	 
+ ALTER TABLE `hrm_emp_official_info_tb` MODIFY COLUMN `emp_official_info_id` INT AUTO_INCREMENT;
+ 
+Sub Table 15 : hrm_emp_personal_details_td not migrated successfully Duplicate entry '0' for key 'PRIMARY'
+ remedie : 	 
+	ALTER TABLE `hrm_emp_personal_details_td` MODIFY COLUMN `` INT AUTO_INCREMENT;
+ 
+Sub Table 17 : hrm_emp_reliving_info not migrated successfully Duplicate entry '0' for key 'PRIMARY'
+ remedie : 	 
+	ALTER TABLE `hrm_emp_reliving_info` MODIFY COLUMN `` INT AUTO_INCREMENT;
+	
+Sub Table 21 : hrm_emp_timesheet not migrated successfully Duplicate entry '0' for key 'PRIMARY'
+ remedie : 	 
+	ALTER TABLE `hrm_emp_timesheet` MODIFY COLUMN `` INT AUTO_INCREMENT;
+	 
+Sub Table 24 : hrm_leave_type_rule not migrated successfully Duplicate entry '0' for key 'PRIMARY'
+ remedie : 	 
+ 	ALTER TABLE `hrm_leave_type_rule` MODIFY COLUMN `` INT AUTO_INCREMENT;
+	
+Sub Table 25 : hrm_notification_tb not migrated successfully Duplicate entry '0' for key 'PRIMARY'
+ remedie : 	 
+ 	ALTER TABLE `hrm_notification_tb` MODIFY COLUMN `` INT AUTO_INCREMENT;
+	
+Sub Table 27 : hrm_personal_meta_td not migrated successfully Duplicate entry '0' for key 'PRIMARY'
+ remedie : 	 
+ 	ALTER TABLE `hrm_personal_meta_td` MODIFY COLUMN `` INT AUTO_INCREMENT;
+	
+Sub Table 32 : hrm_settings_tb not migrated successfully Duplicate entry '0' for key 'PRIMARY'
+ remedie : 	 
+ 	ALTER TABLE `hrm_settings_tb` MODIFY COLUMN `` INT AUTO_INCREMENT;
+	
+Sub Table 42 : hrm_emp_login_tb not migrated successfully Duplicate entry '0' for key 'PRIMARY'
+ remedie : 	 
+ 	ALTER TABLE `hrm_emp_login_tb` MODIFY COLUMN `` INT AUTO_INCREMENT;
+	
+
+
+ 
+ 
+ 
+ -------------------------------------------
+			TABLES MISSING IN MAIN TABLE
+-----------------------------------------------
+ 
+Bug 15: Missing in fobesshrm_stage
+
+	Main Table 1 : hrm_expense_history_process
+	
+ remedie : 
+		 
+		CREATE TABLE `hrm_expense_history_process` (
+		  `tracking_id` int(11) NOT NULL,
+		  `action_type` int(11) NOT NULL,
+		  `payment_method` text,
+		  `date_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+		  `payment_description` text,
+		  `history_process_flag` int(11) NOT NULL,
+		  `approval_status` int(11) NOT NULL,
+		  `employee_id` int(11) NOT NULL,
+		  `payment_date` text,
+		  `history_process_id` int(11) NOT NULL
+		) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+		ALTER TABLE `hrm_expense_history_process`
+		  ADD PRIMARY KEY (`history_process_id`);
+		ALTER TABLE `hrm_expense_history_process`
+		  MODIFY `history_process_id` int(11) NOT NULL AUTO_INCREMENT;COMMIT;
+

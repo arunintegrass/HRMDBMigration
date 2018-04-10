@@ -1,0 +1,12 @@
+temp_fobesshrm_stage - Query1 :  not executed  Table 'hrm_expense_approvelist_process' already exists
+temp_fobesshrm_stage - Query2 :  not executed  Multiple primary key defined
+temp_fobesshrm_stage - Query4 :  not executed  Duplicate column name 'emp_apply_leave_lop'
+temp_fobesshrm_stage - Query5 :  not executed  Table 'hrm_expense_history_process' already exists
+temp_fobesshrm_stage - Query6 :  not executed  Multiple primary key defined
+temp_fobesshrm_stage - Query10 :  not executed  Duplicate column name 'finance_notification'
+temp_fobesshrm_stage - Query4 :  not executed  Duplicate column name 'emp_apply_leave_lop'
+temp_fobesshrm_stage - Query12 :  not executed  Unknown column ' designation_depth' in 'hrm_emp_designation_td'
+temp_fobesshrm_stage - Query8 :  not executed  Table 'test_fobesshrm.organization_tree_tb' doesn't exist
+temp_fobesshrm_stage - Query9 :  not executed  Table 'test_fobesshrm.organization_tree_tb' doesn't exist
+temp_fobesshrm_stage - Query12 :  not executed  Unknown column ' designation_depth' in 'hrm_emp_designation_td'
+temp_fobesshrm_stage - Query12 :  not executed  Unknown column ' designation_depth' in 'hrm_emp_designation_td'

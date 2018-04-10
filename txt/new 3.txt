@@ -1,0 +1,121 @@
+integrasshrm_stage.emp_leave_type_td
+integrasshrm_stage.event_map_tb
+integrasshrm_stage.hrm_applicant_history_process
+integrasshrm_stage.hrm_document_td
+integrasshrm_stage.hrm_emp_contact_td
+integrasshrm_stage.hrm_emp_education_td
+integrasshrm_stage.hrm_emp_experience_tb
+integrasshrm_stage.hrm_emp_exp_td
+integrasshrm_stage.hrm_emp_family_tb
+integrasshrm_stage.hrm_emp_leave_td
+integrasshrm_stage.hrm_emp_official_info_tb
+integrasshrm_stage.hrm_emp_personal_bank_detail_tb
+integrasshrm_stage.hrm_emp_personal_details_td
+integrasshrm_stage.hrm_emp_probation_tb
+integrasshrm_stage.hrm_emp_reliving_info
+integrasshrm_stage.hrm_emp_reporting_td
+integrasshrm_stage.hrm_emp_shop_addcart
+integrasshrm_stage.hrm_emp_status_map_td
+integrasshrm_stage.hrm_emp_timesheet
+integrasshrm_stage.hrm_eventsnewletter_tb
+integrasshrm_stage.hrm_expense_approvelist_process
+integrasshrm_stage.hrm_interview_process_td
+integrasshrm_stage.hrm_leave_type_rule
+integrasshrm_stage.hrm_notification_tb
+integrasshrm_stage.hrm_payroll_td
+integrasshrm_stage.hrm_personal_meta_td
+integrasshrm_stage.hrm_post_job_td
+integrasshrm_stage.hrm_privilege_map_td
+integrasshrm_stage.hrm_project_map_tb
+integrasshrm_stage.hrm_project_task_tb
+integrasshrm_stage.hrm_settings_tb
+integrasshrm_stage.hrm_table_fields_td
+integrasshrm_stage.keys
+integrasshrm_stage.logs
+integrasshrm_stage.payroll_allowance_tb
+integrasshrm_stage.payroll_deduction_tb
+integrasshrm_stage.payroll_salary_tb
+integrasshrm_stage.payroll_temp
+integrasshrm_stage.performance_appraisal
+integrasshrm_stage.performance_kpi
+integrasshrm_stage.performance_review
+integrasshrm_stage.tree_parent_tb
+integrasshrm_stage.hrm_emp_login_tb
+
+
+
+DELETE FROM `emp_leave_type_td`;
+DELETE FROM `events_tb`;
+DELETE FROM `event_map_tb`;
+DELETE FROM `hrm_applicant_history_process`;
+DELETE FROM `hrm_applicant_td`;
+DELETE FROM `hrm_category_tb`;
+DELETE FROM `hrm_client_tb`;
+DELETE FROM `hrm_common_table`;
+DELETE FROM `hrm_company_td`;
+DELETE FROM `hrm_custom_msg`;
+DELETE FROM `hrm_department_td`;
+DELETE FROM `hrm_document_map_td`;
+DELETE FROM `hrm_document_td`;
+DELETE FROM `hrm_empdiscount_tb`;
+DELETE FROM `hrm_employee_td`;
+DELETE FROM `hrm_emp_checklist`;
+DELETE FROM `hrm_emp_contact_td`;
+DELETE FROM `hrm_emp_descriptionexp_td`;
+DELETE FROM `hrm_emp_designation_td`;
+DELETE FROM `hrm_emp_education_td`;
+DELETE FROM `hrm_emp_experience_tb`;
+DELETE FROM `hrm_emp_exp_td`;
+DELETE FROM `hrm_emp_family_tb`;
+DELETE FROM `hrm_emp_leave_bal_tb`;
+DELETE FROM `hrm_emp_leave_td`;
+DELETE FROM `hrm_emp_leave_td1`;
+DELETE FROM `hrm_emp_login_tb`;
+DELETE FROM `hrm_emp_official_info_tb`;
+DELETE FROM `hrm_emp_personal_bank_detail_tb`;
+DELETE FROM `hrm_emp_personal_details_td`;
+DELETE FROM `hrm_emp_probation_tb`;
+DELETE FROM `hrm_emp_reliving_info`;
+DELETE FROM `hrm_emp_reporting_td`;
+DELETE FROM `hrm_emp_shop_addcart`;
+DELETE FROM `hrm_emp_shop_product`;
+DELETE FROM `hrm_emp_status_map_td`;
+DELETE FROM `hrm_emp_status_td`;
+DELETE FROM `hrm_emp_timesheet`;
+DELETE FROM `hrm_eventsnewletter_tb`;
+DELETE FROM `hrm_expuploadmap_td`;
+DELETE FROM `hrm_general_configure_td`;
+DELETE FROM `hrm_group_privilege_td`;
+DELETE FROM `hrm_holiday_list_td`;
+DELETE FROM `hrm_interview_process_td`;
+DELETE FROM `hrm_leave_type_rule`;
+DELETE FROM `hrm_leave_type_tb`;
+DELETE FROM `hrm_notification_setting_tb`;
+DELETE FROM `hrm_notification_tb`;
+DELETE FROM `hrm_payroll_td`;
+DELETE FROM `hrm_personal_meta_td`;
+DELETE FROM `hrm_post_job_td`;
+DELETE FROM `hrm_privilege_map_td`;
+DELETE FROM `hrm_privilege_td`;
+DELETE FROM `hrm_project_map_tb`;
+DELETE FROM `hrm_project_task_tb`;
+DELETE FROM `hrm_project_tb`;
+DELETE FROM `hrm_settings_tb`;
+DELETE FROM `hrm_setting_fields_tb`;
+DELETE FROM `hrm_shift_map_td`;
+DELETE FROM `hrm_shift_td`;
+DELETE FROM `hrm_table_fields_td`;
+DELETE FROM `hrm_work_shifts`;
+DELETE FROM `keys`;
+DELETE FROM `logs`;
+DELETE FROM `organization_tree_tb`;
+DELETE FROM `payroll_allowance_tb`;
+DELETE FROM `payroll_deduction_tb`;
+DELETE FROM `payroll_salary_tb`;
+DELETE FROM `payroll_temp`;
+DELETE FROM `performance_appraisal`;
+DELETE FROM `performance_kpi`;
+DELETE FROM `performance_review`;
+DELETE FROM `religion_tb`;
+DELETE FROM `state_tb1`;
+DELETE FROM `tree_parent_tb`;

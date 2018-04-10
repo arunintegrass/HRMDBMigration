@@ -1,0 +1,9 @@
+Sub Table 14 : hrm_document_map_td not migrated successfully Duplicate entry '219' for key 'PRIMARY'
+Sub Table 21 : hrm_emp_designation_td not migrated successfully Column count doesn't match value count at row 1
+Sub Table 33 : hrm_emp_reliving_info not migrated successfully Duplicate entry '50' for key 'PRIMARY'
+Sub Table 49 : hrm_notification_tb not migrated successfully Duplicate entry '332' for key 'PRIMARY'
+Sub Table 51 : hrm_personal_meta_td not migrated successfully Duplicate entry '462' for key 'PRIMARY'
+Sub Table 63 : organization_tree_tb not migrated successfully Duplicate entry '19' for key 'PRIMARY'
+Sub Table 81 : hrm_work_shifts not migrated successfully Duplicate entry '1' for key 'PRIMARY'
+Sub Table 82 : hrm_emp_designation_td not migrated successfully Column count doesn't match value count at row 1
+Sub Table 83 : hrm_department_td not migrated successfully Duplicate entry '1' for key 'PRIMARY'
