@@ -361,7 +361,8 @@
 	else if($moduleName == "company"){
 	
 		$mainTable  =   array(
-								['pKey'=>'company_id','tbName'=>'hrm_company_td','extraUpdate'=>' parent_id=1,is_parent=0 ','companyExtraCond'=>" where hrm_version='US' "], //company_id								
+								//['pKey'=>'company_id','tbName'=>'hrm_company_td','extraUpdate'=>' parent_id=1,is_parent=0 ','companyExtraCond'=>" where hrm_version='US' "], //company_id								
+								['pKey'=>'company_id','tbName'=>'hrm_company_td','extraUpdate'=>' parent_id=1,is_parent=0,currency_type=1 ','companyExtraCond'=>" where is_parent='1' "], //company_id								
 							);							
 		//Sub Table					
 		$subTableArray  =   array(								
