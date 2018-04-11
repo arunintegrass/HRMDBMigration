@@ -5,8 +5,6 @@
 	
 	//Relation Table (or) Sub Table Array - Table 1 - test2 
 	$subTableArray  =   array(
-							//Email Configuration Table
-							['pkey'=>'mail_config_id','tbName'=>'hrm_email_configuration'],
 							//Settings Table
 							['pkey'=>'setting_id','tbName'=>'hrm_settings_tb'],
 							//Expense Tables

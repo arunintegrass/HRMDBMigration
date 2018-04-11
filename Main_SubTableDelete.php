@@ -9,8 +9,6 @@
 				
 			//Insert into sub tables and update the employee id with latest employee id
 			$deleteTableArray  =   array(		
-									//Email Configuration
-									 'hrm_email_configuration',
 									//Setting Table	
 									 'hrm_settings_tb',
 									//Expense Tables	
