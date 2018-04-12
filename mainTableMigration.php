@@ -77,7 +77,7 @@
 										  dest.".$subTableArray[$k][$i]['fKey']." = '".$latest_unique_id."'
 										WHERE 
 										   dest.`".$subTableArray[$k][$i]['pKey']."` IN ( src.pArray) " ;
-														
+													
 						$subTableCopyQuery1 = mysql_query($subQuery1);
 						
 						if($subTableCopyQuery1){

@@ -14,6 +14,7 @@
 								"ALTER TABLE `hrm_expense_history_process` CHANGE `date_time` `date_time` timestamp on update CURRENT_TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP",
 								"ALTER TABLE `hrm_expense_approvelist_process` CHANGE `date_time` `date_time` timestamp on update CURRENT_TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP",
 								"ALTER TABLE `hrm_emp_reporting_td` CHANGE `track_date` `track_date` timestamp on update CURRENT_TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP",
+								"ALTER TABLE `hrm_employee_td` DROP `branch_data` ",
 							);
 							
 		//Disable Foreign Key Check Temporarily Disable

@@ -35,7 +35,8 @@
 						
 		for($k = 0; $k < count($mainTable); $k++){		
 		
-			$parentCompanyQuery = "SELECT ".$dbArray['mainTableColumn']." as uniq_id from ".$dbArray['mainDB'].".".$dbArray['mainTable'];		
+			//$parentCompanyQuery = "SELECT ".$dbArray['mainTableColumn']." as uniq_id from ".$dbArray['mainDB'].".".$dbArray['mainTable'];		
+			$parentCompanyQuery = "SELECT ".$dbArray['mainTableColumn']." as uniq_id from ".$dbArray['finalDB'].".".$dbArray['mainTable'];		
 			if(isset($mainTable[$k]['companyExtraCond'])){
 				$parentCompanyQuery .= $mainTable[$k]['companyExtraCond'];
 			}	
@@ -48,6 +49,7 @@
 				
 				$subQuery1 = "update ".$dbArray['destDB'].".".$updateTableArray[$k][$i]['tbName']." set ".$updateTableArray[$k][$i]['fKey']." = ".$mainCompanyId;
 				$subTableCopyQuery1 = mysql_query($subQuery1);
+				
 				if($subTableCopyQuery1){
 					$msg = "Sub Table ".($i+1)." : ".$updateTableArray[$k][$i]['tbName']." updated Successfully\r\n\n";
 					msg_log($msg,'UpdateCompanyId_Success');
