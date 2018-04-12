@@ -12,3 +12,9 @@ $mainTable  =  $subTableArray  =  array();
 							);				
 							
 updateCompanyId($dbArray,$mainTable,'1','UpdateCompanyModule_CompanyId');
+
+
+$db = mysql_select_db($dbArray['destDB'],$con);
+
+$alterTableQuery_fob = mysql_query("ALTER TABLE `hrm_leave_type_tb` ADD `hrm_version` VARCHAR(10) NOT NULL DEFAULT 'IN'");
+echo $alterTableQuery_fob;
