@@ -46,6 +46,7 @@
 								"ALTER TABLE `hrm_employee_td` ADD `finance_notification` INT NOT NULL AFTER `checklist_status`, ADD `expense_limit` INT NOT NULL AFTER `finance_notification`",
 								"ALTER TABLE `hrm_group_fields_td` ADD `field_expense_limit` INT NOT NULL AFTER `field_group_flag`",
 								"ALTER TABLE `hrm_emp_designation_td` CHANGE ` designation_depth` `designation_depth` INT(11) NULL DEFAULT NULL",
+								"ALTER TABLE `hrm_emp_designation_td` CHANGE `	designation_depth` `designation_depth` INT( 11 ) NULL DEFAULT NULL",
 								"ALTER TABLE `hrm_company_td` ADD `hrm_version` VARCHAR(10) NOT NULL DEFAULT 'US' AFTER `currency_type`",
 								"ALTER TABLE `hrm_emp_leave_bal_tb` ADD `leave_bal_det` VARCHAR(255) NOT NULL AFTER `leavey_mon_year`",
 								"ALTER TABLE `hrm_leave_type_tb` ADD `leave_mon_up` DATE NOT NULL AFTER `leave_des`",
