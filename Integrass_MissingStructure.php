@@ -121,6 +121,7 @@
 								"ALTER TABLE `payroll_salary_tb` ADD `currency_type` INT NOT NULL DEFAULT '2' AFTER `grade_id`",
 								"ALTER TABLE `hrm_emp_designation_td` ADD `dept_track_date` TIMESTAMP NOT NULL AFTER `designation_flag`",		
 								"ALTER TABLE `hrm_emp_timesheet` ADD `timesheet_adate` DATETIME NOT NULL",								
+								"ALTER TABLE `hrm_project_task_tb` ADD `task_show` INT(11) NOT NULL",								
 							);
 							
 		for($i=0;$i<count($alterTableArray_fob);$i++){
