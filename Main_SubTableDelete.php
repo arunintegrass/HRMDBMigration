@@ -39,7 +39,7 @@
 									 'hrm_emp_family_tb',
 									 'hrm_emp_leave_bal_tb',
 									 'hrm_emp_leave_td',
-									 'hrm_emp_leave_td1',
+									 //'hrm_emp_leave_td1',
 									 //'hrm_emp_login_tb', // Master
 									 'hrm_emp_official_info_tb',
 									 'hrm_emp_personal_bank_detail_tb',
