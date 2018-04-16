@@ -42,6 +42,7 @@
 								"ALTER TABLE `hrm_company_td` ADD `hrm_payroll_sdate` INT(11) NOT NULL DEFAULT '8' AFTER `hrm_date_format`",	
 								"ALTER TABLE `hrm_company_td` ADD `hrm_payroll_edate` INT(11) NOT NULL DEFAULT '0' AFTER `hrm_payroll_sdate`",	
 								"ALTER TABLE `hrm_employee_td` ADD `branch_data` VARCHAR(10) NOT NULL DEFAULT 'IN' ",	
+								"ALTER TABLE `hrm_emp_login_tb` ADD `branch_data` VARCHAR(10) NOT NULL DEFAULT 'IN' ",	
 								"ALTER TABLE `hrm_leave_type_tb` ADD `type_leave` INT NOT NULL AFTER `leave_mon_up`, ADD `add_balance_year` INT NOT NULL AFTER `type_leave`",
 								"ALTER TABLE `hrm_leave_type_tb` ADD `hrm_version` VARCHAR(10) NOT NULL DEFAULT 'IN'",	
 								"UPDATE `hrm_company_td` SET `currency_type` = '1' ",
@@ -114,6 +115,7 @@
 								"ALTER TABLE `hrm_expense_approvelist_process` CHANGE `date_time` `date_time` DATETIME",
 								"ALTER TABLE `hrm_emp_reporting_td` CHANGE `track_date` `track_date` DATETIME",
 								"ALTER TABLE `hrm_employee_td` ADD `branch_data` VARCHAR(10) NOT NULL DEFAULT 'US' ",
+								"ALTER TABLE `hrm_emp_login_tb` ADD `branch_data` VARCHAR(10) NOT NULL DEFAULT 'US' ",
 								"UPDATE `hrm_company_td` SET `currency_type` = '2' ",			
 								"ALTER TABLE `hrm_company_td` ADD `hrm_date_format` INT(11) NOT NULL DEFAULT '0' AFTER `hrm_version`",		
 								"ALTER TABLE `hrm_company_td` ADD `hrm_payroll_sdate` INT(11) NOT NULL DEFAULT '25' AFTER `hrm_date_format`",	
@@ -121,7 +123,24 @@
 								"ALTER TABLE `payroll_salary_tb` ADD `currency_type` INT NOT NULL DEFAULT '2' AFTER `grade_id`",
 								"ALTER TABLE `hrm_emp_designation_td` ADD `dept_track_date` TIMESTAMP NOT NULL AFTER `designation_flag`",		
 								"ALTER TABLE `hrm_emp_timesheet` ADD `timesheet_adate` DATETIME NOT NULL",								
-								"ALTER TABLE `hrm_project_task_tb` ADD `task_show` INT(11) NOT NULL",								
+								"ALTER TABLE `hrm_project_task_tb` ADD `task_show` INT(11) NOT NULL",		
+								"CREATE TABLE IF NOT EXISTS `hrm_emp_history` (
+											  `history_id` int(11) NOT NULL,
+											  `user_id` int(11) NOT NULL,
+											  `old_user_id` int(11) NOT NULL,
+											  `description` text NOT NULL,
+											  `old_emp_status` varchar(100) NOT NULL,
+											  `old_emp_id` varchar(50) NOT NULL,
+											  `old_branch` varchar(200) NOT NULL,
+											  `old_department` varchar(200) NOT NULL,
+											  `old_designation` varchar(200) NOT NULL,
+											  `old_emp_type` varchar(100) NOT NULL,
+											  `old_reporting_to` int(11) NOT NULL,
+											  `created_on` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+											  `created_by` int(11) NOT NULL
+											) ENGINE=InnoDB DEFAULT CHARSET=latin1",	
+								"ALTER TABLE `hrm_emp_history`  ADD PRIMARY KEY (`history_id`)",	
+								"ALTER TABLE `hrm_emp_history`  MODIFY `history_id` int(11) NOT NULL AUTO_INCREMENT",	
 							);
 							
 		for($i=0;$i<count($alterTableArray_fob);$i++){

@@ -72,6 +72,7 @@
 									 'hrm_shift_map_td',
 									 'hrm_shift_td',
 									 'hrm_table_fields_td',
+									 'hrm_emp_history',
 									// 'hrm_work_shifts',
 									 'organization_tree_tb',
 									 'payroll_allowance_tb',
