@@ -11,11 +11,12 @@
 			
 			//Adding Extra Column Where the data are migrated or not - migratestatus
 			for($i=0;$i<count($subTableArray[$k]);$i++){
-				if((!isset($subTableArray[$k][$i]['migrateUpdate']))||((isset($subTableArray[$k][$i]['migrateUpdate']))&&($subTableArray[$k][$i]['migrateUpdate'] == 1))){
-					$destExtraColumn = "ALTER TABLE ".$dbArray['destDB'].".".$subTableArray[$k][$i]['tbName']." ADD `migratestatus` VARCHAR(10) NOT NULL DEFAULT '0'";
+				//if((!isset($subTableArray[$k][$i]['migrateUpdate']))||((isset($subTableArray[$k][$i]['migrateUpdate']))&&($subTableArray[$k][$i]['migrateUpdate'] == 1))){
+					//$destExtraColumn = "ALTER TABLE ".$dbArray['destDB'].".".$subTableArray[$k][$i]['tbName']." ADD `migratestatus` VARCHAR(10) NOT NULL DEFAULT '0'";
+					$destExtraColumn = "ALTER TABLE ".$dbArray['destDB'].".".$subTableArray[$k][$i]['tbName']." ADD `migratestatus` INT(11) NOT NULL DEFAULT '0'";
 					//echo $destExtraColumn;
 					$exedestExtraColumn = mysql_query($destExtraColumn);
-				}	
+				//}	
 			}
 		
 			$extraColumn = "";
@@ -148,14 +149,36 @@
 									$subQueryCond = $subTableArray[$k][$i]['extraCond'];
 								}	
 								//".$subTableArray[$k][$i]['fKey']." = '".$old_unique_id."'  and (`migratestatus` = '0' or `migratestatus` = '$migrateCheckStatus')
-								$subQuery1 = " UPDATE 
-												  ".$dbArray['destDB'].".".$subTableArray[$k][$i]['tbName']." dest,
-												  (SELECT
-														(`".$subTableArray[$k][$i]['pKey']."`) as pArray
+								//(`".$subTableArray[$k][$i]['pKey']."`) as pArray
+								
+								//Extra Condition Except hrm_emp_leave_td - Condition not working for particular hrm_emp_leave_td table
+								$extraQuery = " and `migratestatus` IN (".$migrateCheckStatus.") ";
+								if( $subTableArray[$k][$i]['tbName'] == "hrm_emp_leave_td"){
+									$extraQuery = "";
+								}	
+								
+								//Count
+								$count = "SELECT
+														count(`".$subTableArray[$k][$i]['pKey']."`) as pArray
 													FROM
 														".$dbArray['destDB'].".".$subTableArray[$k][$i]['tbName']."
 													WHERE
-														".$subTableArray[$k][$i]['fKey']." = '".$old_unique_id."'  and `migratestatus` IN (".$migrateCheckStatus.")
+														".$subTableArray[$k][$i]['fKey']." = '".$old_unique_id."'  ".$extraQuery."
+														".$subQueryCond;
+								$countQue = mysql_query($count);						
+								$fetchdataPreviousAvail = mysql_fetch_array($countQue);
+								$countdataAvail = $fetchdataPreviousAvail['pArray'];
+								
+								
+								
+								$subQuery1 = " UPDATE 
+												  ".$dbArray['destDB'].".".$subTableArray[$k][$i]['tbName']." dest,
+												  (SELECT
+														concat(`".$subTableArray[$k][$i]['pKey']."`,',') as pArray
+													FROM
+														".$dbArray['destDB'].".".$subTableArray[$k][$i]['tbName']."
+													WHERE
+														".$subTableArray[$k][$i]['fKey']." = '".$old_unique_id."'  ".$extraQuery."
 														".$subQueryCond."
 														) src 
 												SET
@@ -165,11 +188,13 @@
 												   dest.`".$subTableArray[$k][$i]['pKey']."` IN ( src.pArray) " ;
 												   
 								
+								
+								
 								$subTableCopyQuery1 = mysql_query($subQuery1);
 								//echo ' Sub Query New = '.$subQuery1."<br>";
 								msg_log($subQuery1,$filename.'Extra');
 								if($subTableCopyQuery1){
-									$msg = "Sub Table ".($i+1)." : ".$subTableArray[$k][$i]['tbName']." rows affected ".mysql_affected_rows()." updated Successfully\r\n\n";
+									$msg = "Total Count - ".$countdataAvail."\n<br>Sub Table ".($i+1)." : ".$subTableArray[$k][$i]['tbName']." rows affected ".mysql_affected_rows()." updated Successfully\r\n\n<br>Total Count  ".$countdataAvail."  - Rows Count ".mysql_affected_rows()."\n = ";$msg.=($countdataAvail==mysql_affected_rows())?"Same":"Not";
 									msg_log($msg,$filename.'Success');
 								}else{
 									$msg = "Sub Table ".($i+1)." : ".$subTableArray[$k][$i]['tbName']." not updated successfully ".mysql_error();				 
@@ -184,7 +209,7 @@
 														    "'".$latest_unique_id."','".$old_unique_id."','Migration')";
 															
 									$insertOldNewIdExe = mysql_query($insertOldNewIdQuery);
-									msg_log($insertOldNewIdQuery,$filename.'Hisory');
+									msg_log($insertOldNewIdQuery,$filename.'History');
 								}								
 						}else{
 							  $msg =  "Main Table Insert : ".$mainTable[$k]['tbName']." Old Unique Id - ".$old_unique_id." not migrated successfully ".mysql_error();
@@ -232,14 +257,36 @@
 								if(isset($subTableArray[$k][$i]['extraCond'])){
 									$subQueryCond = $subTableArray[$k][$i]['extraCond'];
 								}	
-								$subQuery1 = " UPDATE 
-												  ".$dbArray['destDB'].".".$subTableArray[$k][$i]['tbName']." dest,
-												  (SELECT
-														(`".$subTableArray[$k][$i]['pKey']."`) as pArray
+								
+								//Extra Condition Except hrm_emp_leave_td - Condition not working for particular hrm_emp_leave_td table
+								$extraQuery = " and `migratestatus` IN (".$migrateCheckStatus.") ";
+								if( $subTableArray[$k][$i]['tbName'] == "hrm_emp_leave_td"){
+									$extraQuery = " ";
+								}	
+								
+								//Count
+								$count = "SELECT
+														count(`".$subTableArray[$k][$i]['pKey']."`) as pArray
 													FROM
 														".$dbArray['destDB'].".".$subTableArray[$k][$i]['tbName']."
 													WHERE
-														".$subTableArray[$k][$i]['fKey']." = '".$old_unique_id."' and `migratestatus` IN (".$migrateCheckStatus.")
+														".$subTableArray[$k][$i]['fKey']." = '".$old_unique_id."'  ".$extraQuery."
+														".$subQueryCond;
+														echo $count;
+								$countQue = mysql_query($count);						
+								$fetchdataPreviousAvail = mysql_fetch_array($countQue);
+								$countdataAvail = $fetchdataPreviousAvail['pArray'];
+								
+								
+								//(`".$subTableArray[$k][$i]['pKey']."`) as pArray
+								$subQuery1 = " UPDATE 
+												  ".$dbArray['destDB'].".".$subTableArray[$k][$i]['tbName']." dest,
+												  (SELECT
+														concat(`".$subTableArray[$k][$i]['pKey']."`,',') as pArray														 
+													FROM
+														".$dbArray['destDB'].".".$subTableArray[$k][$i]['tbName']."
+													WHERE
+														".$subTableArray[$k][$i]['fKey']." = '".$old_unique_id."' ".$extraQuery."
 														".$subQueryCond."
 														) src 
 												SET
@@ -256,7 +303,8 @@
 								$subTableCopyQuery1 = mysql_query($subQuery1);
 								
 								if($subTableCopyQuery1){
-									$msg = "Sub Table ".($i+1)." : ".$subTableArray[$k][$i]['tbName']." rows affected ".mysql_affected_rows()." updated Successfully\r\n\n";
+									//$msg = "Sub Table ".($i+1)." : ".$subTableArray[$k][$i]['tbName']." rows affected ".mysql_affected_rows()." updated Successfully\r\n\n";
+									$msg = "Total Count - ".$countdataAvail."\n<br>Sub Table ".($i+1)." : ".$subTableArray[$k][$i]['tbName']." rows affected ".mysql_affected_rows()." updated Successfully\r\n\n<br>Total Count  ".$countdataAvail."  - Rows Count ".mysql_affected_rows()."\n = ";$msg.=($countdataAvail==mysql_affected_rows())?"Same":"Not";
 									msg_log($msg,$filename.'Success');
 								}else{
 									$msg = "Sub Table ".($i+1)." : ".$subTableArray[$k][$i]['tbName']." not updated successfully ".mysql_error();				 
@@ -269,7 +317,7 @@
 									$insertOldNewIdQuery = "INSERT INTO ".$dbArray['destDB'].".hrm_emp_history(user_id,old_user_id,description) VALUES (".
 														    "'".$latest_unique_id."','".$old_unique_id."','Migration')";															
 									$insertOldNewIdExe = mysql_query($insertOldNewIdQuery);
-									msg_log($insertOldNewIdQuery,$filename.'Hisory');
+									msg_log($insertOldNewIdQuery,$filename.'History');
 								}							
 						}else{
 							  $msg =  "Main Table Update : ".$mainTable[$k]['tbName']." Old Unique Id - ".$old_unique_id." and New Unique Id - ".$new_uniq_data." is equal  need not be updated ".mysql_error();
@@ -280,7 +328,7 @@
 														    "'".$new_uniq_data."','".$old_unique_id."','Same Id - Migration not done')";
 															//echo '<br><br>'.$insertOldNewIdQuery.'<br><br>';
 									$insertOldNewIdExe = mysql_query($insertOldNewIdQuery);
-									msg_log($insertOldNewIdQuery,$filename.'Hisory');
+									msg_log($insertOldNewIdQuery,$filename.'History');
 								}	
 							  msg_log($msg,$filename.'Fail');
 						 }		
@@ -298,10 +346,10 @@
 			
 			//Delete Extra Column Where the data are after migrated - migratestatus
 			for($i=0;$i<count($subTableArray[$k]);$i++){
-				if((!isset($subTableArray[$k][$i]['migrateUpdate']))||((isset($subTableArray[$k][$i]['migrateUpdate']))&&($subTableArray[$k][$i]['migrateUpdate'] == 2))){
+				//if((!isset($subTableArray[$k][$i]['migrateUpdate']))||((isset($subTableArray[$k][$i]['migrateUpdate']))&&($subTableArray[$k][$i]['migrateUpdate'] == 2))){
 					$destExtraColumn = "ALTER TABLE ".$dbArray['destDB'].".".$subTableArray[$k][$i]['tbName']." DROP `migratestatus`";
 					$exedestExtraColumn = mysql_query($destExtraColumn);
-				}
+				//}
 				//Delete Employee
 				if(($_REQUEST['modulename'] == "employee")&&($subTableArray[$k][$i]['tbName'] == "hrm_emp_login_tb" )){
 					//Delete Extra Column Where the data are after migrated -  branch_data

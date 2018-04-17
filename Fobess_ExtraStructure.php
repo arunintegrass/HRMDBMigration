@@ -24,9 +24,10 @@
 								"TRUNCATE `hrm_employee_td`",								
 								//"UPDATE `hrm_common_table` SET `field_value` = 'timesheet comments_old' WHERE `hrm_common_table`.`id` = 52 and  `field_value` = 'timesheet comments'",
 								//"UPDATE `hrm_common_table` SET `field_name` = 'timesheet_old' WHERE `hrm_common_table`.`id` = 52",
-								"UPDATE `hrm_common_table` SET `field_value` = 'timesheet comments_old',`field_name` = 'timesheet_old' WHERE `hrm_common_table`.`menu_config` = 1 and  `field_value` = 'timesheet comments'",
-								"UPDATE `hrm_emp_login_tb` SET `username` = 'subash1@integrass.com' WHERE `hrm_emp_login_tb`.`emp_login_id` = 116 and `username` = 'subash@integrass.com' ",
-								"UPDATE `hrm_emp_login_tb` SET `password` = 'a85fef5033968a7be5ae5698890655c9', `rand_key` = '' WHERE `hrm_emp_login_tb`.`emp_login_id` = 122 and `hrm_emp_login_tb`.`username`='demoemp@gmai.com'",								
+								//"UPDATE `hrm_common_table` SET `field_value` = 'timesheet comments_old',`field_name` = 'timesheet_old' WHERE `hrm_common_table`.`menu_config` = 1 and  `field_value` = 'timesheet comments'",
+								"UPDATE  `hrm_common_table` SET  `field_name` =  'timesheet_old', `field_value` =  'timesheet comments_old' WHERE  `hrm_common_table`.`id` =27",
+								//"UPDATE `hrm_emp_login_tb` SET `username` = 'subash1@integrass.com' WHERE `hrm_emp_login_tb`.`emp_login_id` = 116 and `username` = 'subash@integrass.com' ",
+								//"UPDATE `hrm_emp_login_tb` SET `password` = 'a85fef5033968a7be5ae5698890655c9', `rand_key` = '' WHERE `hrm_emp_login_tb`.`emp_login_id` = 122 and `hrm_emp_login_tb`.`username`='demoemp@gmai.com'",								
 							);
 							
 		//Disable Foreign Key Check Temporarily Disable

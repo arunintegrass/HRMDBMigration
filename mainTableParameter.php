@@ -372,7 +372,7 @@
 									),	
 							);	
 	}		
-	mainTableMigration($dbArray,$mainTable,$subTableArray,ucfirst($moduleName).'Module_');
+	mainTableMigration($dbArray,$mainTable,$subTableArray,ucfirst($moduleName).'Module_',$con);
 	
 	
 ?>

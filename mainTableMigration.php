@@ -2,7 +2,7 @@
 
 	include('messagelog.php');
 	include('updateCompanyId.php');
-	function mainTableMigration($dbArray,$mainTable,$subTableArray,$moduleName){
+	function mainTableMigration($dbArray,$mainTable,$subTableArray,$moduleName,$con){
 			
 		if(isset($mainTable[0]['extraUpdate'])){
 				//include('updateCompanyId.php');
@@ -63,10 +63,24 @@
 						if(isset($subTableArray[$k][$i]['extraCond'])){
 							$subQueryCond = $subTableArray[$k][$i]['extraCond'];
 						}	
+						//(`".$subTableArray[$k][$i]['pKey']."`) as pArray
+						
+						//Count
+						$count = "SELECT
+												count(`".$subTableArray[$k][$i]['pKey']."`) as pArray			
+											FROM
+												".$dbArray['destDB'].".".$subTableArray[$k][$i]['tbName']."
+											WHERE
+												".$subTableArray[$k][$i]['fKey']." = '".$old_unique_id."' 
+												".$subQueryCond;
+						$countQue = mysql_query($count);						
+						$fetchdataPreviousAvail = mysql_fetch_array($countQue);
+						$countdataAvail = $fetchdataPreviousAvail['pArray'];
+						
 						$subQuery1 = " UPDATE 
 										  ".$dbArray['destDB'].".".$subTableArray[$k][$i]['tbName']." dest,
 										  (SELECT
-												(`".$subTableArray[$k][$i]['pKey']."`) as pArray
+												concat(`".$subTableArray[$k][$i]['pKey']."`,',') as pArray			
 											FROM
 												".$dbArray['destDB'].".".$subTableArray[$k][$i]['tbName']."
 											WHERE
@@ -81,7 +95,8 @@
 						$subTableCopyQuery1 = mysql_query($subQuery1);
 						
 						if($subTableCopyQuery1){
-							$msg = "Sub Table ".($i+1)." : ".$subTableArray[$k][$i]['tbName']." updated Successfully\r\n\n";
+							//$msg = "Sub Table ".($i+1)." : ".$subTableArray[$k][$i]['tbName']." updated Successfully\r\n\n";
+							$msg = "Total Count - ".$countdataAvail."\n<br>Sub Table ".($i+1)." : ".$subTableArray[$k][$i]['tbName']." rows affected ".mysql_affected_rows()." updated Successfully\r\n\n<br>Total Count  ".$countdataAvail."  - Rows Count ".mysql_affected_rows()."\n = ";$msg.=($countdataAvail==mysql_affected_rows())?"Same":"Not";
 							msg_log($msg,$filename.'Success');
 						}else{
 							$msg = "Sub Table ".($i+1)." : ".$subTableArray[$k][$i]['tbName']." not updated successfully ".mysql_error();				 

@@ -96,8 +96,10 @@
 										['pKey'=>'newletter_id','fKey'=>'upload_by','tbName'=>'hrm_eventsnewletter_tb','migrateUpdate'=>'2'],
 										['pKey'=>'doc_map_id','fKey'=>'upload_by','tbName'=>'hrm_expuploadmap_td'],
 										['pKey'=>'tree_map_id','fKey'=>'parent_org_tree_id','tbName'=>'tree_parent_tb'],
+										//['pKey'=>'leave_id','fKey'=>'employee_id','tbName'=>'hrm_emp_leave_td','migrateUpdate'=>'1'],
+										//['pKey'=>'leave_id','fKey'=>'leave_send_to','tbName'=>'hrm_emp_leave_td','migrateUpdate'=>'2'],	
 										['pKey'=>'leave_id','fKey'=>'employee_id','tbName'=>'hrm_emp_leave_td','migrateUpdate'=>'1'],
-										['pKey'=>'leave_id','fKey'=>'leave_send_to','tbName'=>'hrm_emp_leave_td','migrateUpdate'=>'2'],
+										['pKey'=>'leave_id','fKey'=>'leave_send_to','tbName'=>'hrm_emp_leave_td','migrateUpdate'=>'2'],										
 									),								
 							);	
 	}
@@ -166,7 +168,8 @@
 								//emp_group_id Tables
 								array(
 										['pKey'=>'employee_id','fKey'=>'emp_type','tbName'=>'hrm_employee_td'],
-										['pKey'=>'leave_type_id','fKey'=>'leave_type_id','tbName'=>'hrm_leave_type_tb'],
+										//['pKey'=>'leave_type_id','fKey'=>'leave_type_id','tbName'=>'hrm_leave_type_tb'],
+										['pKey'=>'leave_type_id','fKey'=>'employee_type','tbName'=>'hrm_leave_type_tb'],
 								),								
 							);	
 	}else if($moduleName == "groupfield"){  //For Group Field Module
