@@ -40,7 +40,7 @@
 			if(isset($mainTable[$k]['companyExtraCond'])){
 				$parentCompanyQuery .= $mainTable[$k]['companyExtraCond'];
 			}	
-			echo $parentCompanyQuery;
+			//echo $parentCompanyQuery;
 			$parentCompanyQueryExe = mysql_query($parentCompanyQuery);				
 			$parentCompanyExe = mysql_fetch_array($parentCompanyQueryExe);				
 			$mainCompanyId = $parentCompanyExe[0];

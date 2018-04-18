@@ -69,8 +69,7 @@
 									 'hrm_privilege_td',
 									 'hrm_project_map_tb',
 									 'hrm_project_task_tb',
-									 'hrm_project_tb',
-									
+									 'hrm_project_tb',									
 									// 'hrm_setting_fields_tb',
 									 'hrm_shift_map_td',
 									 'hrm_shift_td',

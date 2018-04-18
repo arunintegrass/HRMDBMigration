@@ -85,7 +85,8 @@
 								"ALTER TABLE `hrm_emp_history`  ADD PRIMARY KEY (`history_id`)",	
 								"ALTER TABLE `hrm_emp_history`  MODIFY `history_id` int(11) NOT NULL AUTO_INCREMENT",		
 								"ALTER TABLE `hrm_post_job_td` ADD `branche_id` INT(11) NOT NULL DEFAULT '1'",	
-								"ALTER TABLE `hrm_post_job_td` ADD `branch_data` VARCHAR(10) NOT NULL DEFAULT 'US' ",										
+								"ALTER TABLE `hrm_post_job_td` ADD `branch_data` VARCHAR(10) NOT NULL DEFAULT 'US' ",		
+								"ALTER TABLE `hrm_project_map_tb` ADD `task_show` INT(11) NOT NULL",									
 								
 								//Truncate the Master Tables 		
 								/*"TRUNCATE `hrm_setting_fields_tb`",
