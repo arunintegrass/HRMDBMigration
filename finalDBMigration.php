@@ -71,7 +71,7 @@
 									 'hrm_settings_tb',									
 									 'hrm_shift_map_td',
 									 'hrm_shift_td',
-									 'hrm_table_fields_td',
+									 //'hrm_table_fields_td',
 									 'hrm_emp_history',
 									// 'hrm_work_shifts',
 									 'organization_tree_tb',
@@ -107,6 +107,12 @@
 		
 		for($i=0;$i<count($migrateTableArray);$i++){
 		
+		//Total Count Before Migrate
+		$countQuery =  " SELECT count(*) as countData from ".$dbArray['destDB'].".".$migrateTableArray[$i];	
+		$execountQuery = mysql_query($countQuery);
+		$rescountQuery = mysql_fetch_array($execountQuery);
+		$countData = $rescountQuery['countData'];
+			
 			//Insert into sub tables and update the employee id with latest employee id
 			 $subQuery1 =  "INSERT INTO ".$dbArray['finalDB'].".".$migrateTableArray[$i].						
 						   " SELECT * from ".$dbArray['destDB'].".".$migrateTableArray[$i];	
@@ -115,6 +121,8 @@
 			msg_log($subQuery1,'FinalDB_TableMigrations_Queries');
 			if($subTableCopyQuery1){
 				$msg = "Sub Table ".($i+1)." : ".$migrateTableArray[$i]." migrated Successfully";
+				$msg .= "<br>\n\nTotal Data - ".$countData." && Migrated Data Count - ".mysql_affected_rows()." - ";
+				$msg .= "<br>\n\nTable Status - ".($countData == mysql_affected_rows())?"Same":"Not";
 				msg_log($msg,'FinalDB_TableMigrations_Success');
 			}else{
 				$msg = "Sub Table ".($i+1)." : ".$migrateTableArray[$i]." not migrated successfully ".mysql_error();				 

@@ -254,8 +254,8 @@
 	}	
 	//For Field Module
 	else if($moduleName == "field"){
-		//Field Tables
-		$mainTable  =   array(
+		//Field Tables ==> Not Necessary Because already hrm_table_fields_td has US and IN Entries
+		/*$mainTable  =   array(
 								['pKey'=>'field_id','tbName'=>'hrm_table_fields_td'], // field_id							
 							);							
 							
@@ -265,6 +265,7 @@
 										['pKey'=>'personal_meta_id','fKey'=>'hrm_table_fields_td_field_id','tbName'=>'hrm_personal_meta_td'],				
 									),
 							);	
+		*/					
 	}	
 	//For Organization Module
 	else if($moduleName == "organization"){
@@ -369,6 +370,7 @@
 								//Update - company_id
 								array(
 										['pKey'=>'employee_id','fKey'=>'branche_id','tbName'=>'hrm_employee_td','extraCond'=>" and branch_data = 'IN' "],
+										['pKey'=>'job_id','fKey'=>'branche_id','tbName'=>'hrm_post_job_td','extraCond'=>" and branch_data = 'IN' "],
 									),	
 							);	
 	}		

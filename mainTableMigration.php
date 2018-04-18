@@ -10,7 +10,12 @@
 			
 		for($k = 0; $k < count($mainTable); $k++){	
 		
-				
+			//Adding Extra Column Where the data are migrated or not - migratestatus
+			for($i=0;$i<count($subTableArray[$k]);$i++){
+					$destExtraColumn = "ALTER TABLE ".$dbArray['destDB'].".".$subTableArray[$k][$i]['tbName']." ADD `migratestatus` INT(11) NOT NULL DEFAULT '0'";
+					//echo $destExtraColumn;
+					$exedestExtraColumn = mysql_query($destExtraColumn);				
+			}
 					
 			 $select_id = mysql_query("SELECT ".$mainTable[$k]['pKey']." as uniq_id from ".$dbArray['srcDB'].".".$mainTable[$k]['tbName']);
 			
@@ -47,8 +52,7 @@
 					
 					//Latest Unique Id
 					$latest_unique_id = mysql_insert_id();
-					$msg = "New Unique Id - ".$latest_unique_id." is successfully migrated to ".$mainTable[$k]['tbName'];
-					
+					$msg = "New Unique Id - ".$latest_unique_id." is successfully migrated to ".$mainTable[$k]['tbName'];					
 					msg_log($msg,$filename.'Queries');	
 				
 					
@@ -58,6 +62,8 @@
 						if(isset($subTableArray[$k][$i]['extraCond'])){
 							$subQuery1 .= $subTableArray[$k][$i]['extraCond'];
 						}*/
+						
+						
 
 						$subQueryCond = "";
 						if(isset($subTableArray[$k][$i]['extraCond'])){
@@ -65,13 +71,17 @@
 						}	
 						//(`".$subTableArray[$k][$i]['pKey']."`) as pArray
 						
+						$migrateCheckStatus = "0";
+						$migrateUpdateStatus = "1";
+						$extraQuery = " and `migratestatus` IN (".$migrateCheckStatus.") ";
+								
 						//Count
 						$count = "SELECT
 												count(`".$subTableArray[$k][$i]['pKey']."`) as pArray			
 											FROM
 												".$dbArray['destDB'].".".$subTableArray[$k][$i]['tbName']."
 											WHERE
-												".$subTableArray[$k][$i]['fKey']." = '".$old_unique_id."' 
+												".$subTableArray[$k][$i]['fKey']." = '".$old_unique_id."'  ".$extraQuery."
 												".$subQueryCond;
 						$countQue = mysql_query($count);						
 						$fetchdataPreviousAvail = mysql_fetch_array($countQue);
@@ -84,11 +94,12 @@
 											FROM
 												".$dbArray['destDB'].".".$subTableArray[$k][$i]['tbName']."
 											WHERE
-												".$subTableArray[$k][$i]['fKey']." = '".$old_unique_id."' 
+												".$subTableArray[$k][$i]['fKey']." = '".$old_unique_id."'  ".$extraQuery."
 												".$subQueryCond."
 												) src 
 										SET
 										  dest.".$subTableArray[$k][$i]['fKey']." = '".$latest_unique_id."'
+										  ,dest.migratestatus = '$migrateUpdateStatus'
 										WHERE 
 										   dest.`".$subTableArray[$k][$i]['pKey']."` IN ( src.pArray) " ;
 													
@@ -120,7 +131,6 @@
 						updateCompanyId($dbArray,$mainTable,$old_unique_id,'UpdateCompanyModule_');
 					}	
 					
-					
 				}else{
 					  $msg =  "Main Table : ".$mainTable[$k]['tbName']." Old Unique Id - ".$old_unique_id." not migrated successfully ".mysql_error();
 					  msg_log($msg,$filename.'Fail');
@@ -130,6 +140,12 @@
 			//Disable Foreign Key Check Enable
 			$foreignkeyQuery_enable =  " SET FOREIGN_KEY_CHECKS = 1;";
 			$foreignkeyQueryExe_enable = mysql_query($foreignkeyQuery_enable);
+			
+			//Delete Extra Column Where the data are after migrated - migratestatus
+			for($i=0;$i<count($subTableArray[$k]);$i++){
+					$destExtraColumn = "ALTER TABLE ".$dbArray['destDB'].".".$subTableArray[$k][$i]['tbName']." DROP `migratestatus`";
+					$exedestExtraColumn = mysql_query($destExtraColumn);
+			}
 		}
 	}	
 		

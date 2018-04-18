@@ -81,6 +81,12 @@
 			$columnQuery = " SELECT GROUP_CONCAT(COLUMN_NAME) FROM information_schema.columns WHERE table_schema = '".$dbArray['srcDB']."' AND table_name = '".$subTableArray[$i]['tbName']."'  and column_name NOT IN ( '".$subTableArray[$i]['pkey']."') ";	
 			$execolumnQuery = mysql_query($columnQuery);
 			$rescolumnQuery = mysql_fetch_array($execolumnQuery);	
+			
+			//Total Count Before Migrate
+			$countQuery = " SELECT count( '".$subTableArray[$i]['pkey']."') as countData from ".$dbArray['srcDB'].".".$subTableArray[$i]['tbName'];
+			$execountQuery = mysql_query($countQuery);
+			$rescountQuery = mysql_fetch_array($execountQuery);
+			$countData = $rescountQuery['countData'];
 				
 			//Insert into sub tables and update the employee id with latest employee id
 			 $subQuery1 =  "INSERT INTO ".$dbArray['destDB'].".".$subTableArray[$i]['tbName'].							
@@ -91,6 +97,8 @@
 			msg_log($subQuery1,'subTableMigrations_Queries');
 			if($subTableCopyQuery1){
 				$msg = "Sub Table ".($i+1)." : ".$subTableArray[$i]['tbName']." migrated Successfully";
+				$msg .= "<br>\n\nTotal Data - ".$countData." && Migrated Data Count - ".mysql_affected_rows()." - ";
+				$msg .= "<br>\n\nTable Status - ".($countData==mysql_affected_rows())?"Same":"Not";
 				msg_log($msg,'subTableMigrations_Success');
 			}else{
 				$msg = "Sub Table ".($i+1)." : ".$subTableArray[$i]['tbName']." not migrated successfully ".mysql_error();				 

@@ -45,13 +45,13 @@
 								"ALTER TABLE `organization_tree_tb` ADD `org_tree_id` INT NOT NULL AUTO_INCREMENT FIRST, ADD PRIMARY KEY (`org_tree_id`)",
 								"ALTER TABLE `hrm_employee_td` ADD `finance_notification` INT NOT NULL AFTER `checklist_status`, ADD `expense_limit` INT NOT NULL AFTER `finance_notification`",
 								"ALTER TABLE `hrm_group_fields_td` ADD `field_expense_limit` INT NOT NULL AFTER `field_group_flag`",
-								"ALTER TABLE `hrm_emp_designation_td` CHANGE ` designation_depth` `designation_depth` INT(11) NULL DEFAULT NULL",
+								//"ALTER TABLE `hrm_emp_designation_td` CHANGE ` designation_depth` `designation_depth` INT(11) NULL DEFAULT NULL",
 								"ALTER TABLE `hrm_emp_designation_td` CHANGE `	designation_depth` `designation_depth` INT( 11 ) NULL DEFAULT NULL",
 								"ALTER TABLE `hrm_company_td` ADD `hrm_version` VARCHAR(10) NOT NULL DEFAULT 'US' AFTER `currency_type`",
 								"ALTER TABLE `hrm_emp_leave_bal_tb` ADD `leave_bal_det` VARCHAR(255) NOT NULL AFTER `leavey_mon_year`",
 								"ALTER TABLE `hrm_leave_type_tb` ADD `leave_mon_up` DATE NOT NULL AFTER `leave_des`",
 								"ALTER TABLE `hrm_emp_designation_td` ADD `dept_track_date` TIMESTAMP NOT NULL AFTER `designation_flag`",
-								"ALTER TABLE `hrm_category_tb` ADD `category_flag` INT NOT NULL DEFAULT '0' AFTER `subcategory_id`",
+								//"ALTER TABLE `hrm_category_tb` ADD `category_flag` INT NOT NULL DEFAULT '0' AFTER `subcategory_id`",
 								"ALTER TABLE `hrm_document_map_td` CHANGE `updated_on` `updated_on` DATETIME",
 								"ALTER TABLE `hrm_emp_exp_td` CHANGE `updated_on` `updated_on` DATETIME",
 								"ALTER TABLE `hrm_applicant_history_process` CHANGE `date_time` `date_time` DATETIME",
@@ -83,7 +83,9 @@
 											  `created_by` int(11) NOT NULL
 											) ENGINE=InnoDB DEFAULT CHARSET=latin1",	
 								"ALTER TABLE `hrm_emp_history`  ADD PRIMARY KEY (`history_id`)",	
-								"ALTER TABLE `hrm_emp_history`  MODIFY `history_id` int(11) NOT NULL AUTO_INCREMENT",								
+								"ALTER TABLE `hrm_emp_history`  MODIFY `history_id` int(11) NOT NULL AUTO_INCREMENT",		
+								"ALTER TABLE `hrm_post_job_td` ADD `branche_id` INT(11) NOT NULL DEFAULT '1'",	
+								"ALTER TABLE `hrm_post_job_td` ADD `branch_data` VARCHAR(10) NOT NULL DEFAULT 'US' ",										
 								
 								//Truncate the Master Tables 		
 								/*"TRUNCATE `hrm_setting_fields_tb`",

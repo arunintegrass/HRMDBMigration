@@ -74,7 +74,7 @@
 									// 'hrm_setting_fields_tb',
 									 'hrm_shift_map_td',
 									 'hrm_shift_td',
-									 'hrm_table_fields_td',
+									//'hrm_table_fields_td',
 									// 'hrm_work_shifts', - Master
 									 'organization_tree_tb',
 									 'payroll_allowance_tb',
