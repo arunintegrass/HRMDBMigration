@@ -70,6 +70,7 @@
 										['pKey'=>'privilege_map_id','fKey'=>'employee_id','tbName'=>'hrm_privilege_map_td'],
 										['pKey'=>'map_id','fKey'=>'employee_id','tbName'=>'hrm_project_map_tb'],
 										['pKey'=>'project_id','fKey'=>'employee_id','tbName'=>'hrm_project_tb'],
+										['pKey'=>'job_id','fKey'=>'posted_by','tbName'=>'hrm_post_job_td'],
 										['pKey'=>'setting_id','fKey'=>'ref_id','tbName'=>'hrm_settings_tb','extraCond'=>' and ref_type=3 '],
 										//['fKey'=>'employee_id','tbName'=>'hrm_shift_map_td'],
 										['pKey'=>'org_tree_id','fKey'=>'employee_tb_employee_id','tbName'=>'organization_tree_tb'],
@@ -170,6 +171,7 @@
 										['pKey'=>'employee_id','fKey'=>'emp_type','tbName'=>'hrm_employee_td'],
 										//['pKey'=>'leave_type_id','fKey'=>'leave_type_id','tbName'=>'hrm_leave_type_tb'],
 										['pKey'=>'leave_type_id','fKey'=>'employee_type','tbName'=>'hrm_leave_type_tb'],
+										['pKey'=>'job_id','fKey'=>'job_type','tbName'=>'hrm_post_job_td'],
 								),								
 							);	
 	}else if($moduleName == "groupfield"){  //For Group Field Module
