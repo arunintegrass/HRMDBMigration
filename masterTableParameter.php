@@ -211,14 +211,17 @@
 	}else if($moduleName == "workshift"){  //For Menu Bar Module
 		//Menu Bar Tables
 		$masterTable  =   array(
+								['pKey'=>'weekdays_id','tbName'=>'hrm_week_days_tb','uniqData1'=>'week_days','uniqData2'=>'working_days','uniqData3'=>'starting_day','uniqData4'=>'weekdays_flag','uniqData5'=>'weekdays_status','uniqData6'=>'shift_type'], // grade_id
 								['pKey'=>'work_shift_id','tbName'=>'hrm_work_shifts','uniqData1'=>'shift_name','uniqData2'=>'shift_start_time','uniqData3'=>'shift_end_time','uniqData4'=>'status'], // grade_id
 							);							
 							
 		$subTableArray  =   array(
+								array(),		
 								//Nod for relationship
 								array(
 									['pKey'=>'employee_id','fKey'=>'shift_timing','tbName'=>'hrm_employee_td'],
 									['pKey'=>'leave_type_id','fKey'=>'work_shift_id','tbName'=>'hrm_leave_type_tb'],
+									['pKey'=>'weekdays_id','fKey'=>'shift_type','tbName'=>'hrm_week_days_tb'],
 								),								
 							);	
 	}else if($moduleName == "designation"){  //For Designation Table Module

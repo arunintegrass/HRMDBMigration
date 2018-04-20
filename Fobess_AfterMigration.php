@@ -18,6 +18,8 @@
 								"ALTER TABLE `hrm_emp_designation_td` CHANGE `dept_track_date` `dept_track_date` timestamp on update CURRENT_TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP",
 								"ALTER TABLE `hrm_employee_td` DROP `branch_data` ",
 								"ALTER TABLE `hrm_post_job_td` DROP `branch_data` ",
+								"ALTER TABLE `hrm_eventsnewletter_tb` DROP `branch_data` ",
+								"ALTER TABLE `hrm_empdiscount_tb` DROP `branch_data` ",
 							);
 							
 		//Disable Foreign Key Check Temporarily Disable

@@ -97,6 +97,7 @@
 									 'hrm_department_td',
 									 'hrm_category_tb',
 									 'hrm_emp_shop_category',
+									 'hrm_week_days_tb',
 								);				
 		
 			

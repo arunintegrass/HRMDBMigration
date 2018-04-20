@@ -34,7 +34,7 @@
 							//Notification
 							['pkey'=>'notify_id','tbName'=>'hrm_notification_tb'],
 							//['pkey'=>'payroll_id','tbName'=>'hrm_payroll_td'],
-							['pkey'=>'job_id','tbName'=>'hrm_post_job_td'],
+							//['pkey'=>'job_id','tbName'=>'hrm_post_job_td'],
 							['pkey'=>'privilege_map_id','tbName'=>'hrm_privilege_map_td'],
 							['pkey'=>'map_id','tbName'=>'hrm_project_map_tb'],
 							//['pkey'=>'task_id','tbName'=>'hrm_project_task_tb'],

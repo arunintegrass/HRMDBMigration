@@ -49,7 +49,9 @@
 								"ALTER TABLE `payroll_salary_tb` ADD `currency_type` INT NOT NULL DEFAULT '1' AFTER `grade_id`",
 								"ALTER TABLE `hrm_emp_designation_td` ADD `dept_track_date` TIMESTAMP NOT NULL AFTER `designation_flag`",		
 								"ALTER TABLE `hrm_post_job_td` ADD `branche_id` INT(11) NOT NULL DEFAULT '1'",			
-								"ALTER TABLE `hrm_post_job_td` ADD `branch_data` VARCHAR(10) NOT NULL DEFAULT 'IN' ",			
+								"ALTER TABLE `hrm_post_job_td` ADD `branch_data` VARCHAR(10) NOT NULL DEFAULT 'IN' ",								
+								"ALTER TABLE `hrm_eventsnewletter_tb` ADD `branche_id` INT(11) NOT NULL DEFAULT '1' , ADD `branch_data` VARCHAR(10) NOT NULL DEFAULT 'IN'",			
+								"ALTER TABLE `hrm_empdiscount_tb` ADD `branche_id` INT(11) NOT NULL DEFAULT '1' , ADD `branch_data` VARCHAR(10) NOT NULL DEFAULT 'IN'",			
 								
 								//"UPDATE `hrm_employee_td` SET `emp_first_name` = 'ABMCG' WHERE `hrm_employee_td`.`employee_id` = 1",
 								//"UPDATE `hrm_employee_td` SET `emp_last_name` = 'Fobess' WHERE `hrm_employee_td`.`employee_id` = 1",
@@ -146,7 +148,9 @@
 								"ALTER TABLE `hrm_emp_history`  MODIFY `history_id` int(11) NOT NULL AUTO_INCREMENT",	
 								"ALTER TABLE `hrm_post_job_td` ADD `branche_id` INT(11) NOT NULL DEFAULT '1'",		
 								"ALTER TABLE `hrm_post_job_td` ADD `branch_data` VARCHAR(10) NOT NULL DEFAULT 'US' ",	
-								"ALTER TABLE `hrm_project_map_tb` ADD `task_show` INT(11) NOT NULL",								
+								"ALTER TABLE `hrm_project_map_tb` ADD `task_show` INT(11) NOT NULL",	
+								"ALTER TABLE `hrm_eventsnewletter_tb` ADD `branche_id` INT(11) NOT NULL DEFAULT '1' , ADD `branch_data` VARCHAR(10) NOT NULL DEFAULT 'US'",											
+								"ALTER TABLE `hrm_empdiscount_tb` ADD `branche_id` INT(11) NOT NULL DEFAULT '1' , ADD `branch_data` VARCHAR(10) NOT NULL DEFAULT 'US'",											
 							);
 							
 		for($i=0;$i<count($alterTableArray_fob);$i++){
