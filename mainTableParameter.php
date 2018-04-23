@@ -373,6 +373,7 @@
 										['pKey'=>'job_id','fKey'=>'branche_id','tbName'=>'hrm_post_job_td','extraCond'=>" and branch_data = 'IN' "],
 										['pKey'=>'newletter_id','fKey'=>'branche_id','tbName'=>'hrm_eventsnewletter_tb','extraCond'=>" and branch_data = 'IN' "],
 										['pKey'=>'discount_id','fKey'=>'branche_id','tbName'=>'hrm_empdiscount_tb','extraCond'=>" and branch_data = 'IN' "],
+										['pKey'=>'shop_category_id','fKey'=>'branche_id','tbName'=>'hrm_emp_shop_category','extraCond'=>" and branch_data = 'IN' "],
 									),	
 							);	
 	}		

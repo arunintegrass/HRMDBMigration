@@ -70,7 +70,7 @@
 										['pKey'=>'privilege_map_id','fKey'=>'employee_id','tbName'=>'hrm_privilege_map_td'],
 										['pKey'=>'map_id','fKey'=>'employee_id','tbName'=>'hrm_project_map_tb'],
 										['pKey'=>'project_id','fKey'=>'employee_id','tbName'=>'hrm_project_tb'],
-										['pKey'=>'job_id','fKey'=>'posted_by','tbName'=>'hrm_post_job_td'],
+										['pKey'=>'job_id','fKey'=>'posted_by','tbName'=>'hrm_post_job_td','extraCond'=>' and branch_data="IN" '],
 										['pKey'=>'setting_id','fKey'=>'ref_id','tbName'=>'hrm_settings_tb','extraCond'=>' and ref_type=3 '],
 										//['fKey'=>'employee_id','tbName'=>'hrm_shift_map_td'],
 										['pKey'=>'org_tree_id','fKey'=>'employee_tb_employee_id','tbName'=>'organization_tree_tb'],
@@ -80,12 +80,12 @@
 										['pKey'=>'event_id','fKey'=>'ref_id','tbName'=>'events_tb'],
 										['pKey'=>'history_process_id','fKey'=>'ref_user_id','tbName'=>'hrm_applicant_history_process'],
 										['pKey'=>'custom_msg_id','fKey'=>'created_by','tbName'=>'hrm_custom_msg'],	
-										['pKey'=>'shop_category_id','fKey'=>'shop_category_creby','tbName'=>'hrm_emp_shop_category'],	
+										['pKey'=>'shop_category_id','fKey'=>'shop_category_creby','tbName'=>'hrm_emp_shop_category','extraCond'=>' and branch_data="IN" '],	
 										['pKey'=>'applicant_id','fKey'=>'posted_by','tbName'=>'hrm_applicant_td'],	//Newly Added
 										['pKey'=>'doc_map_id','fKey'=>'upload_by','tbName'=>'hrm_document_map_td'],
 										['pKey'=>'doc_id','fKey'=>'emp_id','tbName'=>'hrm_document_td'],
-										['pKey'=>'discount_id','fKey'=>'employee_id','tbName'=>'hrm_empdiscount_tb','migrateUpdate'=>'1'],
-										['pKey'=>'discount_id','fKey'=>'upload_by','tbName'=>'hrm_empdiscount_tb','migrateUpdate'=>'2'],
+										['pKey'=>'discount_id','fKey'=>'employee_id','tbName'=>'hrm_empdiscount_tb','migrateUpdate'=>'1','extraCond'=>' and branch_data="IN" '],
+										['pKey'=>'discount_id','fKey'=>'upload_by','tbName'=>'hrm_empdiscount_tb','migrateUpdate'=>'2','extraCond'=>' and branch_data="IN" '],
 										['pKey'=>'tracking_id','fKey'=>'send_to','tbName'=>'hrm_emp_descriptionexp_td','migrateUpdate'=>'1'],
 										['pKey'=>'tracking_id','fKey'=>'posted_by','tbName'=>'hrm_emp_descriptionexp_td','migrateUpdate'=>'2'],
 										['pKey'=>'expense_id','fKey'=>'employee_id','tbName'=>'hrm_emp_exp_td','migrateUpdate'=>'1'],
@@ -93,8 +93,8 @@
 										['pKey'=>'emp_reporting_id','fKey'=>'reporting_to','tbName'=>'hrm_emp_reporting_td'],
 										['pKey'=>'shop_product_id','fKey'=>'shop_product_creby','tbName'=>'hrm_emp_shop_product'],
 										['pKey'=>'emp_status_map_id','fKey'=>'status_changed_by','tbName'=>'hrm_emp_status_map_td'],
-										['pKey'=>'newletter_id','fKey'=>'employee_id','tbName'=>'hrm_eventsnewletter_tb','migrateUpdate'=>'1'],
-										['pKey'=>'newletter_id','fKey'=>'upload_by','tbName'=>'hrm_eventsnewletter_tb','migrateUpdate'=>'2'],
+										['pKey'=>'newletter_id','fKey'=>'employee_id','tbName'=>'hrm_eventsnewletter_tb','migrateUpdate'=>'1','extraCond'=>' and branch_data="IN" '],
+										['pKey'=>'newletter_id','fKey'=>'upload_by','tbName'=>'hrm_eventsnewletter_tb','migrateUpdate'=>'2','extraCond'=>' and branch_data="IN" '],
 										['pKey'=>'doc_map_id','fKey'=>'upload_by','tbName'=>'hrm_expuploadmap_td'],
 										['pKey'=>'tree_map_id','fKey'=>'parent_org_tree_id','tbName'=>'tree_parent_tb'],
 										//['pKey'=>'leave_id','fKey'=>'employee_id','tbName'=>'hrm_emp_leave_td','migrateUpdate'=>'1'],
@@ -121,7 +121,8 @@
 	//For Reward Category Module
 	else if($moduleName == "rewardcategory"){
 		$masterTable  =   array(
-								['pKey'=>'shop_category_id','tbName'=>'hrm_emp_shop_category','uniqData1'=>'shop_category_name','uniqData2'=>'shop_category_desc','uniqData3'=>'shop_category_status','uniqData4'=>'shop_category_flag'], 
+								//['pKey'=>'shop_category_id','tbName'=>'hrm_emp_shop_category','uniqData1'=>'shop_category_name','uniqData2'=>'shop_category_desc','uniqData3'=>'shop_category_status','uniqData4'=>'shop_category_flag'], 
+								['pKey'=>'shop_category_id','tbName'=>'hrm_emp_shop_category','uniqData1'=>'shop_category_name','uniqData2'=>'shop_category_desc','uniqData3'=>'shop_category_status','uniqData4'=>'shop_category_flag','uniqData5'=>'branche_id','uniqData6'=>'branch_data'], 
 							);							
 							
 		$subTableArray  =   array(

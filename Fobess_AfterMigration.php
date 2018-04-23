@@ -20,6 +20,8 @@
 								"ALTER TABLE `hrm_post_job_td` DROP `branch_data` ",
 								"ALTER TABLE `hrm_eventsnewletter_tb` DROP `branch_data` ",
 								"ALTER TABLE `hrm_empdiscount_tb` DROP `branch_data` ",
+								"ALTER TABLE `hrm_emp_shop_category` DROP `branch_data` ",
+								"UPDATE  `hrm_common_table` SET  `field_name` =  'timesheet_old', `field_value` =  'timesheet comments_old' WHERE  `hrm_common_table`.`id` =27",
 							);
 							
 		//Disable Foreign Key Check Temporarily Disable
