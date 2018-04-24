@@ -53,6 +53,7 @@
 								"ALTER TABLE `hrm_eventsnewletter_tb` ADD `branche_id` INT(11) NOT NULL DEFAULT '1' , ADD `branch_data` VARCHAR(10) NOT NULL DEFAULT 'IN'",			
 								"ALTER TABLE `hrm_empdiscount_tb` ADD `branche_id` INT(11) NOT NULL DEFAULT '1' , ADD `branch_data` VARCHAR(10) NOT NULL DEFAULT 'IN'",			
 								"ALTER TABLE `hrm_emp_shop_category` ADD `branche_id` INT(11) NOT NULL DEFAULT '1' , ADD `branch_data` VARCHAR(10) NOT NULL DEFAULT 'IN'",			
+								"ALTER TABLE `hrm_holiday_list_td` ADD `branche_id` INT(11) NOT NULL DEFAULT '1' , ADD `branch_data` VARCHAR(10) NOT NULL DEFAULT 'IN'",			
 								
 								//"UPDATE `hrm_employee_td` SET `emp_first_name` = 'ABMCG' WHERE `hrm_employee_td`.`employee_id` = 1",
 								//"UPDATE `hrm_employee_td` SET `emp_last_name` = 'Fobess' WHERE `hrm_employee_td`.`employee_id` = 1",
@@ -153,6 +154,7 @@
 								"ALTER TABLE `hrm_eventsnewletter_tb` ADD `branche_id` INT(11) NOT NULL DEFAULT '1' , ADD `branch_data` VARCHAR(10) NOT NULL DEFAULT 'US'",											
 								"ALTER TABLE `hrm_empdiscount_tb` ADD `branche_id` INT(11) NOT NULL DEFAULT '1' , ADD `branch_data` VARCHAR(10) NOT NULL DEFAULT 'US'",											
 								"ALTER TABLE `hrm_emp_shop_category` ADD `branche_id` INT(11) NOT NULL DEFAULT '1' , ADD `branch_data` VARCHAR(10) NOT NULL DEFAULT 'US'",											
+								"ALTER TABLE `hrm_holiday_list_td` ADD `branche_id` INT(11) NOT NULL DEFAULT '1' , ADD `branch_data` VARCHAR(10) NOT NULL DEFAULT 'US'",											
 							);
 							
 		for($i=0;$i<count($alterTableArray_fob);$i++){

@@ -81,6 +81,7 @@
 										['pKey'=>'history_process_id','fKey'=>'ref_user_id','tbName'=>'hrm_applicant_history_process'],
 										['pKey'=>'custom_msg_id','fKey'=>'created_by','tbName'=>'hrm_custom_msg'],	
 										['pKey'=>'shop_category_id','fKey'=>'shop_category_creby','tbName'=>'hrm_emp_shop_category','extraCond'=>' and branch_data="IN" '],	
+										['pKey'=>'holiday_id','fKey'=>'added_user_id','tbName'=>'hrm_holiday_list_td','extraCond'=>' and branch_data="IN" '], //Hoilday	
 										['pKey'=>'applicant_id','fKey'=>'posted_by','tbName'=>'hrm_applicant_td'],	//Newly Added
 										['pKey'=>'doc_map_id','fKey'=>'upload_by','tbName'=>'hrm_document_map_td'],
 										['pKey'=>'doc_id','fKey'=>'emp_id','tbName'=>'hrm_document_td'],
@@ -223,6 +224,7 @@
 									['pKey'=>'employee_id','fKey'=>'shift_timing','tbName'=>'hrm_employee_td'],
 									['pKey'=>'leave_type_id','fKey'=>'work_shift_id','tbName'=>'hrm_leave_type_tb'],
 									['pKey'=>'weekdays_id','fKey'=>'shift_type','tbName'=>'hrm_week_days_tb'],
+									['pKey'=>'holiday_id','fKey'=>'shift_timing','tbName'=>'hrm_holiday_list_td','extraCond'=>' and branch_data="IN" '], //Hoilday	
 								),								
 							);	
 	}else if($moduleName == "designation"){  //For Designation Table Module

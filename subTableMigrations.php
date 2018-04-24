@@ -68,6 +68,8 @@
 							['pkey'=>'emp_personal_details_id','tbName'=>'hrm_emp_personal_details_td'],
 							['pkey'=>'emp_family_id','tbName'=>'hrm_emp_family_tb'],
 							['pkey'=>'emp_contact_id','tbName'=>'hrm_emp_contact_td'],
+							//Hoilday
+							['pkey'=>'holiday_id','tbName'=>'hrm_holiday_list_td'],
 
 							
 						);

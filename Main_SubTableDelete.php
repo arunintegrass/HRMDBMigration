@@ -56,7 +56,7 @@
 									 'hrm_expuploadmap_td',
 									// 'hrm_general_configure_td', Not in Use
 									 'hrm_group_privilege_td',
-									 'hrm_holiday_list_td',
+									 'hrm_holiday_list_td', //hoilday
 									 'hrm_interview_process_td',
 									 'hrm_leave_type_rule',
 									 'hrm_leave_type_tb',
