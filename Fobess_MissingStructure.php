@@ -91,6 +91,7 @@
 								"ALTER TABLE `hrm_empdiscount_tb` ADD `branche_id` INT(11) NOT NULL DEFAULT '1' , ADD `branch_data` VARCHAR(10) NOT NULL DEFAULT 'US'",																			
 								"ALTER TABLE `hrm_emp_shop_category` ADD `branche_id` INT(11) NOT NULL DEFAULT '1' , ADD `branch_data` VARCHAR(10) NOT NULL DEFAULT 'US'",																			
 								"ALTER TABLE `hrm_holiday_list_td` ADD `branche_id` INT(11) NOT NULL DEFAULT '1' , ADD `branch_data` VARCHAR(10) NOT NULL DEFAULT 'US'",																			
+								"ALTER TABLE `events_tb` ADD `branche_id` INT(11) NOT NULL DEFAULT '1' , ADD `branch_data` VARCHAR(10) NOT NULL DEFAULT 'US'",																			
 								
 								//Truncate the Master Tables 		
 								/*"TRUNCATE `hrm_setting_fields_tb`",
