@@ -92,6 +92,13 @@
 								"ALTER TABLE `hrm_emp_shop_category` ADD `branche_id` INT(11) NOT NULL DEFAULT '1' , ADD `branch_data` VARCHAR(10) NOT NULL DEFAULT 'US'",																			
 								"ALTER TABLE `hrm_holiday_list_td` ADD `branche_id` INT(11) NOT NULL DEFAULT '1' , ADD `branch_data` VARCHAR(10) NOT NULL DEFAULT 'US'",																			
 								"ALTER TABLE `events_tb` ADD `branche_id` INT(11) NOT NULL DEFAULT '1' , ADD `branch_data` VARCHAR(10) NOT NULL DEFAULT 'US'",																			
+								"ALTER TABLE `hrm_category_tb` ADD `branche_id` INT(11) NOT NULL DEFAULT '1' , ADD `branch_data` VARCHAR(10) NOT NULL DEFAULT 'US'",	
+								//"ALTER TABLE `hrm_emp_designation_td` ADD `branche_id` INT(11) NOT NULL DEFAULT '1' , ADD `branch_data` VARCHAR(10) NOT NULL DEFAULT 'US'",			
+								"ALTER TABLE `hrm_emp_type_tb` ADD `branche_id` INT(11) NOT NULL DEFAULT '1' , ADD `branch_data` VARCHAR(10) NOT NULL DEFAULT 'US'",			
+								//"ALTER TABLE `hrm_department_td` ADD `branche_id` INT(11) NOT NULL DEFAULT '1' , ADD `branch_data` VARCHAR(10) NOT NULL DEFAULT 'US'",		
+								"ALTER TABLE `hrm_work_shifts` ADD `branche_id` INT(11) NOT NULL DEFAULT '1' , ADD `branch_data` VARCHAR(10) NOT NULL DEFAULT 'US'",		
+								"ALTER TABLE `hrm_leave_type_tb` ADD `branche_id` INT(11) NOT NULL DEFAULT '1'",										
+								"ALTER TABLE `hrm_week_days_tb` ADD `branch_data` VARCHAR(10) NOT NULL DEFAULT 'US'",									
 								
 								//Truncate the Master Tables 		
 								/*"TRUNCATE `hrm_setting_fields_tb`",

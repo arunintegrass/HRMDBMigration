@@ -34,6 +34,7 @@
 								//['pKey'=>'emp_login_id','tbName'=>'hrm_emp_login_tb','uniqData1'=>'username','uniqData2'=>'password','uniqData3'=>'user_level','uniqData4'=>'status'], 								
 								//['pKey'=>'employee_id','tbName'=>'hrm_employee_td','uniqData1'=>'emp_first_name','uniqData2'=>'emp_last_name','uniqData3'=>'work_email'], 											
 								['pKey'=>'emp_login_id','tbName'=>'hrm_emp_login_tb','uniqData1'=>'username','uniqData2'=>'status'], 								
+								//workingnottoinlocal['pKey'=>'emp_login_id','tbName'=>'hrm_emp_login_tb','uniqData1'=>'username','uniqData2'=>'status','uniqData3'=>'branch_data'], 								
 								//['pKey'=>'employee_id','tbName'=>'hrm_employee_td','uniqData1'=>'work_email','uniqData2'=>'emp_status'], 								
 								['pKey'=>'employee_id','tbName'=>'hrm_employee_td','uniqData1'=>'work_email'], 								
 							);							
@@ -97,7 +98,7 @@
 										['pKey'=>'newletter_id','fKey'=>'employee_id','tbName'=>'hrm_eventsnewletter_tb','migrateUpdate'=>'1','extraCond'=>' and branch_data="IN" '],
 										['pKey'=>'newletter_id','fKey'=>'upload_by','tbName'=>'hrm_eventsnewletter_tb','migrateUpdate'=>'2','extraCond'=>' and branch_data="IN" '],
 										['pKey'=>'doc_map_id','fKey'=>'upload_by','tbName'=>'hrm_expuploadmap_td'],
-										['pKey'=>'tree_map_id','fKey'=>'parent_org_tree_id','tbName'=>'tree_parent_tb'],
+										//['pKey'=>'tree_map_id','fKey'=>'parent_org_tree_id','tbName'=>'tree_parent_tb'],//Need to check with parent org tree id
 										//['pKey'=>'leave_id','fKey'=>'employee_id','tbName'=>'hrm_emp_leave_td','migrateUpdate'=>'1'],
 										//['pKey'=>'leave_id','fKey'=>'leave_send_to','tbName'=>'hrm_emp_leave_td','migrateUpdate'=>'2'],	
 										['pKey'=>'leave_id','fKey'=>'employee_id','tbName'=>'hrm_emp_leave_td','migrateUpdate'=>'1'],
@@ -108,7 +109,8 @@
 	//For Expense Category Module
 	else if($moduleName == "expensecategory"){
 		$masterTable  =   array(
-								['pKey'=>'category_id','tbName'=>'hrm_category_tb','uniqData1'=>'name','uniqData2'=>'category_status','uniqData3'=>'is_parent','uniqData4'=>'subcategory_id'], 
+								//['pKey'=>'category_id','tbName'=>'hrm_category_tb','uniqData1'=>'name','uniqData2'=>'category_status','uniqData3'=>'is_parent','uniqData4'=>'subcategory_id'], 
+								['pKey'=>'category_id','tbName'=>'hrm_category_tb','uniqData1'=>'name','uniqData2'=>'category_status','uniqData3'=>'is_parent','uniqData4'=>'subcategory_id','uniqData5'=>'branch_data'], 
 							);							
 							
 		$subTableArray  =   array(
@@ -164,15 +166,18 @@
 	}else if($moduleName == "type"){ //For Employee Type Module
 		// Employee Type Tables
 		$masterTable  =   array(
-								['pKey'=>'employment_type_id','tbName'=>'hrm_emp_type_tb','uniqData1'=>'employment_type_name','uniqData2'=>'employment_type_flag','uniqData3'=>'employment_type_status'], // grade_id
+								//['pKey'=>'employment_type_id','tbName'=>'hrm_emp_type_tb','uniqData1'=>'employment_type_name','uniqData2'=>'employment_type_flag','uniqData3'=>'employment_type_status'], // grade_id
+								['pKey'=>'employment_type_id','tbName'=>'hrm_emp_type_tb','uniqData1'=>'employment_type_name','uniqData2'=>'employment_type_flag','uniqData3'=>'employment_type_status','uniqData4'=>'branch_data'], // grade_id
 							);							
 							
 		$subTableArray  =   array(
 								//emp_group_id Tables
 								array(
-										['pKey'=>'employee_id','fKey'=>'emp_type','tbName'=>'hrm_employee_td'],
+										//['pKey'=>'employee_id','fKey'=>'emp_type','tbName'=>'hrm_employee_td'],
+										['pKey'=>'employee_id','fKey'=>'emp_type','tbName'=>'hrm_employee_td','extraCond'=>' and branch_data="IN" '],
 										//['pKey'=>'leave_type_id','fKey'=>'leave_type_id','tbName'=>'hrm_leave_type_tb'],
-										['pKey'=>'leave_type_id','fKey'=>'employee_type','tbName'=>'hrm_leave_type_tb'],
+										//['pKey'=>'leave_type_id','fKey'=>'employee_type','tbName'=>'hrm_leave_type_tb'],
+										['pKey'=>'leave_type_id','fKey'=>'employee_type','tbName'=>'hrm_leave_type_tb','extraCond'=>' and hrm_version="IN" '],
 										['pKey'=>'job_id','fKey'=>'job_type','tbName'=>'hrm_post_job_td'],
 								),								
 							);	
@@ -213,24 +218,29 @@
 	}else if($moduleName == "workshift"){  //For Menu Bar Module
 		//Menu Bar Tables
 		$masterTable  =   array(
-								['pKey'=>'weekdays_id','tbName'=>'hrm_week_days_tb','uniqData1'=>'week_days','uniqData2'=>'working_days','uniqData3'=>'starting_day','uniqData4'=>'weekdays_flag','uniqData5'=>'weekdays_status','uniqData6'=>'shift_type'], // grade_id
-								['pKey'=>'work_shift_id','tbName'=>'hrm_work_shifts','uniqData1'=>'shift_name','uniqData2'=>'shift_start_time','uniqData3'=>'shift_end_time','uniqData4'=>'status'], // grade_id
+								//['pKey'=>'weekdays_id','tbName'=>'hrm_week_days_tb','uniqData1'=>'week_days','uniqData2'=>'working_days','uniqData3'=>'starting_day','uniqData4'=>'weekdays_flag','uniqData5'=>'weekdays_status','uniqData6'=>'shift_type'], // grade_id
+								//['pKey'=>'work_shift_id','tbName'=>'hrm_work_shifts','uniqData1'=>'shift_name','uniqData2'=>'shift_start_time','uniqData3'=>'shift_end_time','uniqData4'=>'status'], // grade_id
+								['pKey'=>'weekdays_id','tbName'=>'hrm_week_days_tb','uniqData1'=>'week_days','uniqData2'=>'working_days','uniqData3'=>'starting_day','uniqData4'=>'weekdays_flag','uniqData5'=>'branch_data','uniqData6'=>'shift_type'], // grade_id
+								['pKey'=>'work_shift_id','tbName'=>'hrm_work_shifts','uniqData1'=>'shift_name','uniqData2'=>'shift_start_time','uniqData3'=>'shift_end_time','uniqData4'=>'status','uniqData5'=>'branch_data'], // grade_id
 							);							
 							
 		$subTableArray  =   array(
 								array(),		
 								//Nod for relationship
 								array(
-									['pKey'=>'employee_id','fKey'=>'shift_timing','tbName'=>'hrm_employee_td'],
-									['pKey'=>'leave_type_id','fKey'=>'work_shift_id','tbName'=>'hrm_leave_type_tb'],
-									['pKey'=>'weekdays_id','fKey'=>'shift_type','tbName'=>'hrm_week_days_tb'],
+									//['pKey'=>'employee_id','fKey'=>'shift_timing','tbName'=>'hrm_employee_td'],
+									['pKey'=>'employee_id','fKey'=>'shift_timing','tbName'=>'hrm_employee_td','extraCond'=>' and branch_data="IN" '],
+									//['pKey'=>'leave_type_id','fKey'=>'work_shift_id','tbName'=>'hrm_leave_type_tb'],
+									['pKey'=>'leave_type_id','fKey'=>'work_shift_id','tbName'=>'hrm_leave_type_tb','extraCond'=>' and hrm_version="IN" '],
+									//['pKey'=>'weekdays_id','fKey'=>'shift_type','tbName'=>'hrm_week_days_tb'],
+									['pKey'=>'weekdays_id','fKey'=>'shift_type','tbName'=>'hrm_week_days_tb','extraCond'=>' and branch_data="IN" '],
 									['pKey'=>'holiday_id','fKey'=>'shift_timing','tbName'=>'hrm_holiday_list_td','extraCond'=>' and branch_data="IN" '], //Hoilday	
 								),								
 							);	
 	}else if($moduleName == "designation"){  //For Designation Table Module
 		//Designation Tables
 		$masterTable  =   array(
-								['pKey'=>'emp_designation_id','tbName'=>'hrm_emp_designation_td','uniqData1'=>'designation_name','uniqData2'=>'designation_parent_id','uniqData3'=>'designation_depth','uniqData4'=>'designation_flag'], // grade_id
+								['pKey'=>'emp_designation_id','tbName'=>'hrm_emp_designation_td','uniqData1'=>'designation_name','uniqData2'=>'designation_parent_id','uniqData3'=>'designation_depth','uniqData4'=>'designation_flag'], // grade_id								
 							);							
 							
 		$subTableArray  =   array(
@@ -245,7 +255,7 @@
 	}else if($moduleName == "department"){  //For Department Table Module
 		//Department Tables
 		$masterTable  =   array(
-								['pKey'=>'department_id','tbName'=>'hrm_department_td','uniqData1'=>'department_name','uniqData2'=>'department_date','uniqData3'=>'department_description','uniqData4'=>'department_flag'], // grade_id
+								['pKey'=>'department_id','tbName'=>'hrm_department_td','uniqData1'=>'department_name','uniqData2'=>'department_date','uniqData3'=>'department_description','uniqData4'=>'department_flag'], // grade_id								
 							);							
 							
 		$subTableArray  =   array(

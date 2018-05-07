@@ -22,6 +22,13 @@
 								"ALTER TABLE `hrm_empdiscount_tb` DROP `branch_data` ",
 								"ALTER TABLE `hrm_emp_shop_category` DROP `branch_data` ",
 								"ALTER TABLE `hrm_holiday_list_td` DROP `branch_data` ",
+								"ALTER TABLE `events_tb` DROP `branch_data` ",
+								"ALTER TABLE `hrm_category_tb` DROP `branch_data` ",
+								//"ALTER TABLE `hrm_emp_designation_td` DROP `branch_data` ",
+								//"ALTER TABLE `hrm_department_td` DROP `branch_data` ",
+								"ALTER TABLE `hrm_work_shifts` DROP `branch_data` ",
+								"ALTER TABLE `hrm_week_days_tb` DROP `branch_data` ",
+								//"ALTER TABLE `hrm_leave_type_tb` DROP `branch_data` ",
 								"UPDATE  `hrm_common_table` SET  `field_name` =  'timesheet_old', `field_value` =  'timesheet comments_old' WHERE  `hrm_common_table`.`id` =27",
 							);
 							
