@@ -98,7 +98,7 @@
 										['pKey'=>'newletter_id','fKey'=>'employee_id','tbName'=>'hrm_eventsnewletter_tb','migrateUpdate'=>'1','extraCond'=>' and branch_data="IN" '],
 										['pKey'=>'newletter_id','fKey'=>'upload_by','tbName'=>'hrm_eventsnewletter_tb','migrateUpdate'=>'2','extraCond'=>' and branch_data="IN" '],
 										['pKey'=>'doc_map_id','fKey'=>'upload_by','tbName'=>'hrm_expuploadmap_td'],
-										//['pKey'=>'tree_map_id','fKey'=>'parent_org_tree_id','tbName'=>'tree_parent_tb'],//Need to check with parent org tree id
+										['pKey'=>'tree_map_id','fKey'=>'parent_org_tree_id','tbName'=>'tree_parent_tb'],//Need to check with parent org tree id
 										//['pKey'=>'leave_id','fKey'=>'employee_id','tbName'=>'hrm_emp_leave_td','migrateUpdate'=>'1'],
 										//['pKey'=>'leave_id','fKey'=>'leave_send_to','tbName'=>'hrm_emp_leave_td','migrateUpdate'=>'2'],	
 										['pKey'=>'leave_id','fKey'=>'employee_id','tbName'=>'hrm_emp_leave_td','migrateUpdate'=>'1'],
