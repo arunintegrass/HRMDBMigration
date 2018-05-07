@@ -33,8 +33,9 @@
 		//Need to add extra column in two tables beneath ==> Fobess Data (or) Integrass Data Need to add extra column in Fobess and Integrass table data and add extracondition for not to update "branch-id"
 								//['pKey'=>'emp_login_id','tbName'=>'hrm_emp_login_tb','uniqData1'=>'username','uniqData2'=>'password','uniqData3'=>'user_level','uniqData4'=>'status'], 								
 								//['pKey'=>'employee_id','tbName'=>'hrm_employee_td','uniqData1'=>'emp_first_name','uniqData2'=>'emp_last_name','uniqData3'=>'work_email'], 											
-								['pKey'=>'emp_login_id','tbName'=>'hrm_emp_login_tb','uniqData1'=>'username','uniqData2'=>'status'], 								
-								//workingnottoinlocal['pKey'=>'emp_login_id','tbName'=>'hrm_emp_login_tb','uniqData1'=>'username','uniqData2'=>'status','uniqData3'=>'branch_data'], 								
+								//['pKey'=>'emp_login_id','tbName'=>'hrm_emp_login_tb','uniqData1'=>'username','uniqData2'=>'status'], 								
+								//workingnottoinlocal
+								['pKey'=>'emp_login_id','tbName'=>'hrm_emp_login_tb','uniqData1'=>'username','uniqData2'=>'status','uniqData3'=>'branch_data'], 								
 								//['pKey'=>'employee_id','tbName'=>'hrm_employee_td','uniqData1'=>'work_email','uniqData2'=>'emp_status'], 								
 								['pKey'=>'employee_id','tbName'=>'hrm_employee_td','uniqData1'=>'work_email'], 								
 							);							
