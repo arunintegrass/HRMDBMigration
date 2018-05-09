@@ -22,7 +22,7 @@
 								"TRUNCATE `hrm_emp_shop_category`",
 								"TRUNCATE `hrm_emp_login_tb`",
 								"TRUNCATE `hrm_employee_td`",								
-								"TRUNCATE `hrm_week_days_tb`",								
+								"TRUNCATE `hrm_week_days_tb`",		
 								//"UPDATE `hrm_common_table` SET `field_value` = 'timesheet comments_old' WHERE `hrm_common_table`.`id` = 52 and  `field_value` = 'timesheet comments'",
 								//"UPDATE `hrm_common_table` SET `field_name` = 'timesheet_old' WHERE `hrm_common_table`.`id` = 52",
 								//"UPDATE `hrm_common_table` SET `field_value` = 'timesheet comments_old',`field_name` = 'timesheet_old' WHERE `hrm_common_table`.`menu_config` = 1 and  `field_value` = 'timesheet comments'",

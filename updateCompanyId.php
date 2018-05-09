@@ -50,6 +50,9 @@
 				$subQuery1 = "update ".$dbArray['destDB'].".".$updateTableArray[$k][$i]['tbName']." set ".$updateTableArray[$k][$i]['fKey']." = ".$mainCompanyId;
 				$subTableCopyQuery1 = mysql_query($subQuery1);
 				
+				$subQuery2 = "update ".$dbArray['finalDB'].".".$updateTableArray[$k][$i]['tbName']." set ".$updateTableArray[$k][$i]['fKey']." = ".$mainCompanyId;
+				$subTableCopyQuery2 = mysql_query($subQuery2);
+				
 				if($subTableCopyQuery1){
 					$msg = "Sub Table ".($i+1)." : ".$updateTableArray[$k][$i]['tbName']." updated Successfully\r\n\n";
 					msg_log($msg,'UpdateCompanyId_Success');

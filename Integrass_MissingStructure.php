@@ -61,7 +61,8 @@
 								//"ALTER TABLE `hrm_department_td` ADD `branche_id` INT(11) NOT NULL DEFAULT '1' , ADD `branch_data` VARCHAR(10) NOT NULL DEFAULT 'IN'",			
 								"ALTER TABLE `hrm_work_shifts` ADD `branche_id` INT(11) NOT NULL DEFAULT '1' , ADD `branch_data` VARCHAR(10) NOT NULL DEFAULT 'IN'",			
 								"ALTER TABLE `hrm_week_days_tb` ADD `branch_data` VARCHAR(10) NOT NULL DEFAULT 'IN'",			
-								"ALTER TABLE `hrm_leave_type_tb` ADD `branche_id` INT(11) NOT NULL DEFAULT '1'",			
+								"ALTER TABLE `hrm_leave_type_tb` ADD `branche_id` INT(11) NOT NULL DEFAULT '1'",	
+								"UPDATE `hrm_company_td` SET company_status=0 where is_parent!='1'",			
 								
 								//"UPDATE `hrm_employee_td` SET `emp_first_name` = 'ABMCG' WHERE `hrm_employee_td`.`employee_id` = 1",
 								//"UPDATE `hrm_employee_td` SET `emp_last_name` = 'Fobess' WHERE `hrm_employee_td`.`employee_id` = 1",
@@ -170,7 +171,8 @@
 								//"ALTER TABLE `hrm_department_td` ADD `branche_id` INT(11) NOT NULL DEFAULT '1' , ADD `branch_data` VARCHAR(10) NOT NULL DEFAULT 'US'",	
 								"ALTER TABLE `hrm_work_shifts` ADD `branche_id` INT(11) NOT NULL DEFAULT '1' , ADD `branch_data` VARCHAR(10) NOT NULL DEFAULT 'US'",	
 								"ALTER TABLE `hrm_week_days_tb` ADD `branch_data` VARCHAR(10) NOT NULL DEFAULT 'US'",			
-								"ALTER TABLE `hrm_leave_type_tb` ADD `branche_id` INT(11) NOT NULL DEFAULT '1'",										
+								"ALTER TABLE `hrm_leave_type_tb` ADD `branche_id` INT(11) NOT NULL DEFAULT '1'",		
+								"INSERT INTO `hrm_company_td` VALUES ('TESS',1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1)",
 							);
 							
 		for($i=0;$i<count($alterTableArray_fob);$i++){

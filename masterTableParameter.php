@@ -37,7 +37,7 @@
 								//workingnottoinlocal
 								['pKey'=>'emp_login_id','tbName'=>'hrm_emp_login_tb','uniqData1'=>'username','uniqData2'=>'status','uniqData3'=>'branch_data'], 								
 								//['pKey'=>'employee_id','tbName'=>'hrm_employee_td','uniqData1'=>'work_email','uniqData2'=>'emp_status'], 								
-								['pKey'=>'employee_id','tbName'=>'hrm_employee_td','uniqData1'=>'work_email'], 								
+								['pKey'=>'employee_id','tbName'=>'hrm_employee_td','uniqData1'=>'work_email','uniqData2'=>'branch_data'], 								
 							);							
 							
 		$subTableArray  =   array(
