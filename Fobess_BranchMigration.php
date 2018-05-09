@@ -30,7 +30,7 @@
 	
 	function branchTableMigration($dbArray,$mainTable,$subTableArray,$moduleName,$con){
 		//$dataBaseArr = array($dbArray['destDB'],$dbArray['finalDB']);
-		$dataBaseArr = array($dbArray['finalDB']);
+		$dataBaseArr = array($dbArray['finalDB'],$dbArray['destDB']);
 		
 		
 		for($i = 0; $i < count($dataBaseArr); $i++){	
