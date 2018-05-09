@@ -37,6 +37,8 @@
 		
 			$dbArray['finalDB'] = $dataBaseArr[$i];
 			
+		
+			
 			for($k = 0; $k < count($mainTable); $k++){	
 			
 				$parentCompanyQuery = "";
@@ -44,8 +46,10 @@
 					$parentCompanyQuery .= $mainTable[$k]['companyExtraCond'];
 				}	
 				
+				$db = mysql_select_db($dbArray['finalDB'],$con);
+					
 				$select_id = mysql_query("SELECT ".$mainTable[$k]['pKey']." as uniq_id from ".$dbArray['finalDB'].".".$mainTable[$k]['tbName']."  ".$parentCompanyQuery);
-				
+				echo "SELECT ".$mainTable[$k]['pKey']." as uniq_id from ".$dbArray['finalDB'].".".$mainTable[$k]['tbName']."  ".$parentCompanyQuery;
 				$filename=$moduleName.$mainTable[$k]['tbName'];	
 
 				//Column Name
