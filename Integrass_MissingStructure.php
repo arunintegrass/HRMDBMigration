@@ -172,7 +172,7 @@
 								"ALTER TABLE `hrm_work_shifts` ADD `branche_id` INT(11) NOT NULL DEFAULT '1' , ADD `branch_data` VARCHAR(10) NOT NULL DEFAULT 'US'",	
 								"ALTER TABLE `hrm_week_days_tb` ADD `branch_data` VARCHAR(10) NOT NULL DEFAULT 'US'",			
 								"ALTER TABLE `hrm_leave_type_tb` ADD `branche_id` INT(11) NOT NULL DEFAULT '1'",		
-								"INSERT INTO `hrm_company_td` VALUES ('TESS',1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1)",
+								"INSERT INTO `hrm_company_td` VALUES ('TESS',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0)",
 							);
 							
 		for($i=0;$i<count($alterTableArray_fob);$i++){

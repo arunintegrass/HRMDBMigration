@@ -6,6 +6,7 @@
 	$updateTableArray  =   array(								
 								//Update - org_tree_id
 								array(
+										['fKey'=>'company_id','tbName'=>'hrm_employee_td'],	
 										['fKey'=>'company_id','tbName'=>'hrm_emp_designation_td'],	
 										['fKey'=>'company_id','tbName'=>'hrm_emp_probation_tb'],	
 										['fKey'=>'company_id','tbName'=>'hrm_emp_status_td'],	
@@ -28,6 +29,8 @@
 										['fKey'=>'company_id','tbName'=>'hrm_emp_exp_td'],	
 										['fKey'=>'cmp_id','tbName'=>'hrm_document_map_td'],	
 										['fKey'=>'cmp_id','tbName'=>'hrm_expuploadmap_td'],	
+										['fKey'=>'cmp_id','tbName'=>'hrm_eventsnewletter_tb'],	
+										['fKey'=>'cmp_id','tbName'=>'hrm_empdiscount_tb'],	
 										
 									),	
 							);	
@@ -48,9 +51,11 @@
 			for($i=0;$i<count($updateTableArray[$k]);$i++){
 				
 				$subQuery1 = "update ".$dbArray['destDB'].".".$updateTableArray[$k][$i]['tbName']." set ".$updateTableArray[$k][$i]['fKey']." = ".$mainCompanyId;
+				echo $subQuery1;
 				$subTableCopyQuery1 = mysql_query($subQuery1);
 				
 				$subQuery2 = "update ".$dbArray['finalDB'].".".$updateTableArray[$k][$i]['tbName']." set ".$updateTableArray[$k][$i]['fKey']." = ".$mainCompanyId;
+				echo $subQuery2;
 				$subTableCopyQuery2 = mysql_query($subQuery2);
 				
 				if($subTableCopyQuery1){

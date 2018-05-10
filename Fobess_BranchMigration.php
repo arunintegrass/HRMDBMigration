@@ -25,20 +25,11 @@
 									['pKey'=>'leave_type_id','fKey'=>'branche_id','tbName'=>'hrm_leave_type_tb','extraCond'=>"  hrm_version = 'US' "],
 								),	
 						);	
-	branchTableMigration($dbArray,$mainTable,$subTableArray,ucfirst($moduleName).'Module_',$con);
+	branchTableMigration($dbArray,$mainTable,$subTableArray,ucfirst($moduleName).'Module_',$con,$dbArray['finalDB']);
+	branchTableMigration($dbArray,$mainTable,$subTableArray,ucfirst($moduleName).'Module_',$con,$dbArray['destDB']);
 	
 	
-	function branchTableMigration($dbArray,$mainTable,$subTableArray,$moduleName,$con){
-		//$dataBaseArr = array($dbArray['destDB'],$dbArray['finalDB']);
-		//$dataBaseArr = array($dbArray['finalDB'],$dbArray['destDB']);
-		$dataBaseArr = array($dbArray['destDB']);
-		
-		
-		for($i = 0; $i < count($dataBaseArr); $i++){	
-		
-			$dbArray['finalDB'] = $dataBaseArr[$i];
-			
-		
+	function branchTableMigration($dbArray,$mainTable,$subTableArray,$moduleName,$con,$currentDB){
 			
 			for($k = 0; $k < count($mainTable); $k++){	
 			
@@ -47,14 +38,14 @@
 					$parentCompanyQuery .= $mainTable[$k]['companyExtraCond'];
 				}	
 				
-				$db = mysql_select_db($dbArray['finalDB'],$con);
+				$db = mysql_select_db($currentDB,$con);
 					
-				$select_id = mysql_query("SELECT ".$mainTable[$k]['pKey']." as uniq_id from ".$dbArray['finalDB'].".".$mainTable[$k]['tbName']."  ".$parentCompanyQuery);
-				echo "SELECT ".$mainTable[$k]['pKey']." as uniq_id from ".$dbArray['finalDB'].".".$mainTable[$k]['tbName']."  ".$parentCompanyQuery;
+				$select_id = mysql_query("SELECT ".$mainTable[$k]['pKey']." as uniq_id from ".$currentDB.".".$mainTable[$k]['tbName']."  ".$parentCompanyQuery);
+				echo "SELECT ".$mainTable[$k]['pKey']." as uniq_id from ".$currentDB.".".$mainTable[$k]['tbName']."  ".$parentCompanyQuery;
 				$filename=$moduleName.$mainTable[$k]['tbName'];	
 
 				//Column Name
-				$columnQuery = " SELECT GROUP_CONCAT(COLUMN_NAME) FROM information_schema.columns WHERE table_schema = '".$dbArray['finalDB']."' AND table_name = '".$mainTable[$k]['tbName']."'  and column_name NOT IN ( '".$mainTable[$k]['pKey']."') ";	
+				$columnQuery = " SELECT GROUP_CONCAT(COLUMN_NAME) FROM information_schema.columns WHERE table_schema = '".$currentDB."' AND table_name = '".$mainTable[$k]['tbName']."'  and column_name NOT IN ( '".$mainTable[$k]['pKey']."') ";	
 				$execolumnQuery = mysql_query($columnQuery);
 				$rescolumnQuery = mysql_fetch_array($execolumnQuery);			
 				
@@ -92,7 +83,7 @@
 						$count = "SELECT
 												count(`".$subTableArray[$k][$i]['pKey']."`) as pArray			
 											FROM
-												".$dbArray['finalDB'].".".$subTableArray[$k][$i]['tbName']."
+												".$currentDB.".".$subTableArray[$k][$i]['tbName']."
 											WHERE
 												".$subQueryCond;
 						$countQue = mysql_query($count);						
@@ -100,11 +91,11 @@
 						$countdataAvail = $fetchdataPreviousAvail['pArray'];
 						
 						$subQuery1 = " UPDATE 
-										  ".$dbArray['finalDB'].".".$subTableArray[$k][$i]['tbName']." dest,
+										  ".$currentDB.".".$subTableArray[$k][$i]['tbName']." dest,
 										  (SELECT
 												concat(`".$subTableArray[$k][$i]['pKey']."`,',') as pArray			
 											FROM
-												".$dbArray['finalDB'].".".$subTableArray[$k][$i]['tbName']."
+												".$currentDB.".".$subTableArray[$k][$i]['tbName']."
 											WHERE
 												".$subQueryCond."
 												) src 
@@ -126,15 +117,15 @@
 					}	
 					
 					//Deactive All the branch
-					$subQuery1 = "update ".$dbArray['finalDB'].".".$mainTable[$k]['tbName']." set ".$mainTable[$k]['deactiveCompany'];
+					$subQuery1 = "update ".$currentDB.".".$mainTable[$k]['tbName']." set ".$mainTable[$k]['deactiveCompany'];
 					$subTableCopyQuery1 = mysql_query($subQuery1);
 					
 					
 					//Copy ABMCG as Integrass
 					//Insert into sub tables and update the Unique id with latest Unique id
-					 $mainQuery =  "INSERT INTO ".$dbArray['finalDB'].".".$mainTable[$k]['tbName'].							
+					 $mainQuery =  "INSERT INTO ".$currentDB.".".$mainTable[$k]['tbName'].							
 									"(".$rescolumnQuery[0].")".
-								   " SELECT ".$rescolumnQuery[0]." from ".$dbArray['finalDB'].".".$mainTable[$k]['tbName'].$parentCompanyQuery;	
+								   " SELECT ".$rescolumnQuery[0]." from ".$currentDB.".".$mainTable[$k]['tbName'].$parentCompanyQuery;	
 					$latest_query = mysql_query($mainQuery);
 					
 					if($latest_query){
@@ -144,7 +135,7 @@
 						
 						//For Update AMBCG as Integrass as Main Branch
 						if(isset($mainTable[$k]['newUpdate'])){
-							$extraUpdateQuery = "update ".$dbArray['finalDB'].".".$mainTable[$k]['tbName']." set ".$mainTable[$k]['newUpdate']." where ".$mainTable[$k]['pKey']." = ".$newlatest_unique_id;
+							$extraUpdateQuery = "update ".$currentDB.".".$mainTable[$k]['tbName']." set ".$mainTable[$k]['newUpdate']." where ".$mainTable[$k]['pKey']." = ".$newlatest_unique_id;
 							$extraTableUpdateQuery = mysql_query($extraUpdateQuery);
 							if($extraTableUpdateQuery){
 								$msg = "New Update Table ".($i+1)." : ".$mainTable[$k]['tbName']." updated Successfully\r\n\n";
@@ -158,7 +149,7 @@
 					
 					//For Update AMBCG as Integrass - US as Sub Branch
 					if(isset($mainTable[$k]['extraUpdate'])){
-						$extraUpdateQuery = "update ".$dbArray['finalDB'].".".$mainTable[$k]['tbName']." set ".$mainTable[$k]['extraUpdate']." where ".$mainTable[$k]['pKey']." = ".$old_unique_id;
+						$extraUpdateQuery = "update ".$currentDB.".".$mainTable[$k]['tbName']." set ".$mainTable[$k]['extraUpdate']." where ".$mainTable[$k]['pKey']." = ".$old_unique_id;
 						$extraTableUpdateQuery = mysql_query($extraUpdateQuery);
 						if($extraTableUpdateQuery){
 							$msg = "Extra Update Table ".($i+1)." : ".$mainTable[$k]['tbName']." updated Successfully\r\n\n";
@@ -176,7 +167,7 @@
 				$foreignkeyQueryExe_enable = mysql_query($foreignkeyQuery_enable);			
 			
 			}
-		}		
+				
 	}	
 		
 ?>
