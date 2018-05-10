@@ -378,7 +378,7 @@
 										['pKey'=>'event_id','fKey'=>'branche_id','tbName'=>'events_tb','extraCond'=>" and branch_data = 'IN' "],
 										['pKey'=>'category_id','fKey'=>'branche_id','tbName'=>'hrm_category_tb','extraCond'=>" and branch_data = 'IN' "],
 										//['pKey'=>'emp_designation_id','fKey'=>'branche_id','tbName'=>'hrm_emp_designation_td','extraCond'=>" and branch_data = 'IN' "],							
-										['pKey'=>'employment_type_id','fKey'=>'branche_id','tbName'=>'hrm_emp_type_tb','extraCond'=>" and branch_data = 'IN' "],
+										//['pKey'=>'employment_type_id','fKey'=>'branche_id','tbName'=>'hrm_emp_type_tb','extraCond'=>" and branch_data = 'IN' "],
 										//['pKey'=>'department_id','fKey'=>'branche_id','tbName'=>'hrm_department_td','extraCond'=>" and branch_data = 'IN' "],
 										['pKey'=>'work_shift_id','fKey'=>'branche_id','tbName'=>'hrm_work_shifts','extraCond'=>" and branch_data = 'IN' "],
 										//['pKey'=>'weekdays_id','fKey'=>'branche_id','tbName'=>'hrm_week_days_tb','extraCond'=>" and branch_data = 'IN' "],

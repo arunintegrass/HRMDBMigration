@@ -168,7 +168,8 @@
 		// Employee Type Tables
 		$masterTable  =   array(
 								//['pKey'=>'employment_type_id','tbName'=>'hrm_emp_type_tb','uniqData1'=>'employment_type_name','uniqData2'=>'employment_type_flag','uniqData3'=>'employment_type_status'], // grade_id
-								['pKey'=>'employment_type_id','tbName'=>'hrm_emp_type_tb','uniqData1'=>'employment_type_name','uniqData2'=>'employment_type_flag','uniqData3'=>'employment_type_status','uniqData4'=>'branch_data'], // grade_id
+								//['pKey'=>'employment_type_id','tbName'=>'hrm_emp_type_tb','uniqData1'=>'employment_type_name','uniqData2'=>'employment_type_flag','uniqData3'=>'employment_type_status','uniqData4'=>'branch_data'], // grade_id
+								['pKey'=>'employment_type_id','tbName'=>'hrm_emp_type_tb','uniqData1'=>'employment_type_name','uniqData2'=>'employment_type_flag','uniqData3'=>'employment_type_status'], // grade_id
 							);							
 							
 		$subTableArray  =   array(

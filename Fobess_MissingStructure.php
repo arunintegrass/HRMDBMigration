@@ -51,7 +51,7 @@
 								"ALTER TABLE `hrm_emp_leave_bal_tb` ADD `leave_bal_det` VARCHAR(255) NOT NULL AFTER `leavey_mon_year`",
 								"ALTER TABLE `hrm_leave_type_tb` ADD `leave_mon_up` DATE NOT NULL AFTER `leave_des`",
 								"ALTER TABLE `hrm_emp_designation_td` ADD `dept_track_date` TIMESTAMP NOT NULL AFTER `designation_flag`",
-								//"ALTER TABLE `hrm_category_tb` ADD `category_flag` INT NOT NULL DEFAULT '0' AFTER `subcategory_id`",
+								"ALTER TABLE `hrm_category_tb` ADD `category_flag` INT NOT NULL DEFAULT '0'",  //Need to comment on Live
 								"ALTER TABLE `hrm_document_map_td` CHANGE `updated_on` `updated_on` DATETIME",
 								"ALTER TABLE `hrm_emp_exp_td` CHANGE `updated_on` `updated_on` DATETIME",
 								"ALTER TABLE `hrm_applicant_history_process` CHANGE `date_time` `date_time` DATETIME",
@@ -94,7 +94,7 @@
 								"ALTER TABLE `events_tb` ADD `branche_id` INT(11) NOT NULL DEFAULT '1' , ADD `branch_data` VARCHAR(10) NOT NULL DEFAULT 'US'",																			
 								"ALTER TABLE `hrm_category_tb` ADD `branche_id` INT(11) NOT NULL DEFAULT '1' , ADD `branch_data` VARCHAR(10) NOT NULL DEFAULT 'US'",	
 								//"ALTER TABLE `hrm_emp_designation_td` ADD `branche_id` INT(11) NOT NULL DEFAULT '1' , ADD `branch_data` VARCHAR(10) NOT NULL DEFAULT 'US'",			
-								"ALTER TABLE `hrm_emp_type_tb` ADD `branche_id` INT(11) NOT NULL DEFAULT '1' , ADD `branch_data` VARCHAR(10) NOT NULL DEFAULT 'US'",			
+								//"ALTER TABLE `hrm_emp_type_tb` ADD `branche_id` INT(11) NOT NULL DEFAULT '1' , ADD `branch_data` VARCHAR(10) NOT NULL DEFAULT 'US'",			
 								//"ALTER TABLE `hrm_department_td` ADD `branche_id` INT(11) NOT NULL DEFAULT '1' , ADD `branch_data` VARCHAR(10) NOT NULL DEFAULT 'US'",		
 								"ALTER TABLE `hrm_work_shifts` ADD `branche_id` INT(11) NOT NULL DEFAULT '1' , ADD `branch_data` VARCHAR(10) NOT NULL DEFAULT 'US'",		
 								"ALTER TABLE `hrm_leave_type_tb` ADD `branche_id` INT(11) NOT NULL DEFAULT '1'",										

@@ -20,7 +20,7 @@
 									['pKey'=>'holiday_id','fKey'=>'branche_id','tbName'=>'hrm_holiday_list_td','extraCond'=>"  branch_data = 'US' "],
 									['pKey'=>'event_id','fKey'=>'branche_id','tbName'=>'events_tb','extraCond'=>"  branch_data = 'US' "],
 									['pKey'=>'category_id','fKey'=>'branche_id','tbName'=>'hrm_category_tb','extraCond'=>"  branch_data = 'US' "],
-									['pKey'=>'employment_type_id','fKey'=>'branche_id','tbName'=>'hrm_emp_type_tb','extraCond'=>"  branch_data = 'US' "],
+									//['pKey'=>'employment_type_id','fKey'=>'branche_id','tbName'=>'hrm_emp_type_tb','extraCond'=>"  branch_data = 'US' "],
 									['pKey'=>'work_shift_id','fKey'=>'branche_id','tbName'=>'hrm_work_shifts','extraCond'=>"  branch_data = 'US' "],
 									['pKey'=>'leave_type_id','fKey'=>'branche_id','tbName'=>'hrm_leave_type_tb','extraCond'=>"  hrm_version = 'US' "],
 								),	
