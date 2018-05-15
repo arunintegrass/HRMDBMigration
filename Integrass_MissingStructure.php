@@ -47,6 +47,7 @@
 								"ALTER TABLE `hrm_leave_type_tb` ADD `hrm_version` VARCHAR(10) NOT NULL DEFAULT 'IN'",	
 								"UPDATE `hrm_company_td` SET `currency_type` = '1' ",
 								"ALTER TABLE `payroll_salary_tb` ADD `currency_type` INT NOT NULL DEFAULT '1' AFTER `grade_id`",
+								"ALTER TABLE `hrm_emp_exp_td` ADD `currency_type` INT NOT NULL DEFAULT '1' AFTER `amount`",
 								"ALTER TABLE `hrm_emp_designation_td` ADD `dept_track_date` TIMESTAMP NOT NULL AFTER `designation_flag`",		
 								"ALTER TABLE `hrm_post_job_td` ADD `branche_id` INT(11) NOT NULL DEFAULT '1'",			
 								"ALTER TABLE `hrm_post_job_td` ADD `branch_data` VARCHAR(10) NOT NULL DEFAULT 'IN' ",								
@@ -63,6 +64,7 @@
 								"ALTER TABLE `hrm_week_days_tb` ADD `branch_data` VARCHAR(10) NOT NULL DEFAULT 'IN'",			
 								"ALTER TABLE `hrm_leave_type_tb` ADD `branche_id` INT(11) NOT NULL DEFAULT '1'",	
 								"UPDATE `hrm_company_td` SET company_status=0 where is_parent!='1'",			
+								"UPDATE `hrm_document_td` SET view_type=1 ",			
 								
 								//"UPDATE `hrm_employee_td` SET `emp_first_name` = 'ABMCG' WHERE `hrm_employee_td`.`employee_id` = 1",
 								//"UPDATE `hrm_employee_td` SET `emp_last_name` = 'Fobess' WHERE `hrm_employee_td`.`employee_id` = 1",
@@ -137,6 +139,7 @@
 								"ALTER TABLE `hrm_company_td` ADD `hrm_payroll_sdate` INT(11) NOT NULL DEFAULT '25' AFTER `hrm_date_format`",	
 								"ALTER TABLE `hrm_company_td` ADD `hrm_payroll_edate` INT(11) NOT NULL DEFAULT '0' AFTER `hrm_payroll_sdate`",	
 								"ALTER TABLE `payroll_salary_tb` ADD `currency_type` INT NOT NULL DEFAULT '2' AFTER `grade_id`",
+								"ALTER TABLE `hrm_emp_exp_td` ADD `currency_type` INT NOT NULL DEFAULT '2' AFTER `amount`",
 								"ALTER TABLE `hrm_emp_designation_td` ADD `dept_track_date` TIMESTAMP NOT NULL AFTER `designation_flag`",		
 								"ALTER TABLE `hrm_emp_timesheet` ADD `timesheet_adate` DATETIME NOT NULL",								
 								"ALTER TABLE `hrm_project_task_tb` ADD `task_show` INT(11) NOT NULL",		

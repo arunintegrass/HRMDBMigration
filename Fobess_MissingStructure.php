@@ -63,6 +63,7 @@
 								"ALTER TABLE `hrm_company_td` ADD `hrm_payroll_sdate` INT(11) NOT NULL DEFAULT '25' AFTER `hrm_date_format`",	
 								"ALTER TABLE `hrm_company_td` ADD `hrm_payroll_edate` INT(11) NOT NULL DEFAULT '0' AFTER `hrm_payroll_sdate`",	
 								"ALTER TABLE `payroll_salary_tb` ADD `currency_type` INT NOT NULL DEFAULT '2' AFTER `grade_id`",	
+								"ALTER TABLE `hrm_emp_exp_td` ADD `currency_type` INT NOT NULL DEFAULT '2' AFTER `amount`",
 								"ALTER TABLE `hrm_employee_td` ADD `branch_data` VARCHAR(10) NOT NULL DEFAULT 'US' ",		
 								"ALTER TABLE `hrm_leave_type_tb` ADD `hrm_version` VARCHAR(10) NOT NULL DEFAULT 'US'",			
 								"ALTER TABLE `hrm_emp_timesheet` ADD `timesheet_adate` DATETIME NOT NULL",		
@@ -98,7 +99,17 @@
 								//"ALTER TABLE `hrm_department_td` ADD `branche_id` INT(11) NOT NULL DEFAULT '1' , ADD `branch_data` VARCHAR(10) NOT NULL DEFAULT 'US'",		
 								"ALTER TABLE `hrm_work_shifts` ADD `branche_id` INT(11) NOT NULL DEFAULT '1' , ADD `branch_data` VARCHAR(10) NOT NULL DEFAULT 'US'",		
 								"ALTER TABLE `hrm_leave_type_tb` ADD `branche_id` INT(11) NOT NULL DEFAULT '1'",										
-								"ALTER TABLE `hrm_week_days_tb` ADD `branch_data` VARCHAR(10) NOT NULL DEFAULT 'US'",									
+								"ALTER TABLE `hrm_week_days_tb` ADD `branch_data` VARCHAR(10) NOT NULL DEFAULT 'US'",	
+								"CREATE TABLE IF NOT EXISTS `time_tracker` (
+											 `logid` int(11) NOT NULL,
+											 `employee_id` int(11) NOT NULL,
+											 `start_time` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+											 `end_time` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+											 `duration` int(11) NOT NULL,
+											 `pause_count` int(11) NOT NULL
+											) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1",
+								"ALTER TABLE `time_tracker`	 ADD PRIMARY KEY (`logid`) ",
+								"ALTER TABLE `time_tracker`	 MODIFY `logid` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=1",
 								
 								//Truncate the Master Tables 		
 								/*"TRUNCATE `hrm_setting_fields_tb`",
