@@ -67,6 +67,7 @@
 								"ALTER TABLE `hrm_employee_td` ADD `branch_data` VARCHAR(10) NOT NULL DEFAULT 'US' ",		
 								"ALTER TABLE `hrm_leave_type_tb` ADD `hrm_version` VARCHAR(10) NOT NULL DEFAULT 'US'",			
 								"ALTER TABLE `hrm_emp_timesheet` ADD `timesheet_adate` DATETIME NOT NULL",		
+								"ALTER TABLE `hrm_emp_timesheet` ADD `branch_data` VARCHAR(10) NOT NULL DEFAULT 'US' ",
 								"ALTER TABLE `hrm_project_task_tb` ADD `task_show` INT(11) NOT NULL",		
 								"CREATE TABLE IF NOT EXISTS `hrm_emp_history` (
 											  `history_id` int(11) NOT NULL,

@@ -60,8 +60,8 @@
 										['pKey'=>'reliving_info_id','fKey'=>'employee_id','tbName'=>'hrm_emp_reliving_info'],
 										['pKey'=>'shop_addcart_id','fKey'=>'employee_id','tbName'=>'hrm_emp_shop_addcart'],
 										['pKey'=>'emp_status_map_id','fKey'=>'employee_id','tbName'=>'hrm_emp_status_map_td'],
-										['pKey'=>'timesheet_id','fKey'=>'employee_id','tbName'=>'hrm_emp_timesheet','migrateUpdate'=>'1'],
-										['pKey'=>'timesheet_id','fKey'=>'weak_id','tbName'=>'hrm_emp_timesheet','migrateUpdate'=>'2'], //Newly  Added										
+										['pKey'=>'timesheet_id','fKey'=>'employee_id','tbName'=>'hrm_emp_timesheet','migrateUpdate'=>'1','extraCond'=>' and branch_data="IN" '],
+										['pKey'=>'timesheet_id','fKey'=>'weak_id','tbName'=>'hrm_emp_timesheet','migrateUpdate'=>'2','extraCond'=>' and branch_data="IN" '], //Newly  Added										
 										['pKey'=>'history_process_id','fKey'=>'employee_id','tbName'=>'hrm_expense_approvelist_process'],
 										['pKey'=>'history_process_id','fKey'=>'employee_id','tbName'=>'hrm_expense_history_process'],
 										//['fKey'=>'employee_id','tbName'=>'hrm_notification_setting_tb'],
