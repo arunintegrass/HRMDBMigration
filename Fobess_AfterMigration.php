@@ -29,6 +29,7 @@
 								"ALTER TABLE `hrm_work_shifts` DROP `branch_data` ",
 								"ALTER TABLE `hrm_week_days_tb` DROP `branch_data` ",
 								"ALTER TABLE `hrm_emp_timesheet` DROP `branch_data` ",
+								"ALTER TABLE `hrm_custom_msg` DROP `branch_data` ",
 								//"ALTER TABLE `hrm_leave_type_tb` DROP `branch_data` ",
 								"UPDATE  `hrm_common_table` SET  `field_name` =  'timesheet_old', `field_value` =  'timesheet comments_old' WHERE  `hrm_common_table`.`id` =27",
 							);

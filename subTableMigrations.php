@@ -70,6 +70,8 @@
 							['pkey'=>'emp_contact_id','tbName'=>'hrm_emp_contact_td'],
 							//Hoilday
 							['pkey'=>'holiday_id','tbName'=>'hrm_holiday_list_td'],
+							//Custom Message
+							['pkey'=>'custom_msg_id','tbName'=>'hrm_custom_msg'],
 
 							
 						);

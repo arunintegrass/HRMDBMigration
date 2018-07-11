@@ -99,7 +99,8 @@
 								//"ALTER TABLE `hrm_emp_type_tb` ADD `branche_id` INT(11) NOT NULL DEFAULT '1' , ADD `branch_data` VARCHAR(10) NOT NULL DEFAULT 'US'",			
 								//"ALTER TABLE `hrm_department_td` ADD `branche_id` INT(11) NOT NULL DEFAULT '1' , ADD `branch_data` VARCHAR(10) NOT NULL DEFAULT 'US'",		
 								"ALTER TABLE `hrm_work_shifts` ADD `branche_id` INT(11) NOT NULL DEFAULT '1' , ADD `branch_data` VARCHAR(10) NOT NULL DEFAULT 'US'",		
-								"ALTER TABLE `hrm_leave_type_tb` ADD `branche_id` INT(11) NOT NULL DEFAULT '1'",										
+								"ALTER TABLE `hrm_custom_msg` ADD `branche_id` INT(11) NOT NULL DEFAULT '1' , ADD `branch_data` VARCHAR(10) NOT NULL DEFAULT 'US'",		
+								"ALTER TABLE `hrm_leave_type_tb` ADD `branche_id` INT(11) NOT NULL DEFAULT '1'",									
 								"ALTER TABLE `hrm_week_days_tb` ADD `branch_data` VARCHAR(10) NOT NULL DEFAULT 'US'",	
 								"CREATE TABLE IF NOT EXISTS `time_tracker` (
 											 `logid` int(11) NOT NULL,

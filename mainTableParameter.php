@@ -375,6 +375,7 @@
 										['pKey'=>'discount_id','fKey'=>'branche_id','tbName'=>'hrm_empdiscount_tb','extraCond'=>" and branch_data = 'IN' "],
 										['pKey'=>'shop_category_id','fKey'=>'branche_id','tbName'=>'hrm_emp_shop_category','extraCond'=>" and branch_data = 'IN' "],
 										['pKey'=>'holiday_id','fKey'=>'branche_id','tbName'=>'hrm_holiday_list_td','extraCond'=>" and branch_data = 'IN' "],
+										['pKey'=>'custom_msg_id','fKey'=>'branche_id','tbName'=>'hrm_custom_msg','extraCond'=>" and branch_data = 'IN' "],
 										['pKey'=>'event_id','fKey'=>'branche_id','tbName'=>'events_tb','extraCond'=>" and branch_data = 'IN' "],
 										['pKey'=>'category_id','fKey'=>'branche_id','tbName'=>'hrm_category_tb','extraCond'=>" and branch_data = 'IN' "],
 										//['pKey'=>'emp_designation_id','fKey'=>'branche_id','tbName'=>'hrm_emp_designation_td','extraCond'=>" and branch_data = 'IN' "],							
