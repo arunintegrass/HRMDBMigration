@@ -114,7 +114,7 @@
 								"ALTER TABLE `time_tracker`	 ADD PRIMARY KEY (`logid`) ",
 								"ALTER TABLE `time_tracker`	 MODIFY `logid` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=1",							
 								
-								"ALTER TABLE `hrm_emp_timesheet` ADD `timesheet_deletestatus` INT(10) NOT NULL DEFAULT '0' COMMENT 'Active – 0,Delete – 1' AFTER `timesheet_reject_reason`, ADD `timesheet_deletedby` INT(11) NOT NULL AFTER `timesheet_deletestatus`, ADD `timesheet_deletetime` DATETIME NOT NULL AFTER `timesheet_deletedby`"
+								"ALTER TABLE `hrm_emp_timesheet` ADD `timesheet_deletestatus` INT(10) NOT NULL DEFAULT '0' COMMENT 'Active – 0,Delete – 1' AFTER `timesheet_reject_reason`, ADD `timesheet_deletedby` INT(11) NOT NULL AFTER `timesheet_deletestatus`, ADD `timesheet_deletetime` DATETIME NOT NULL AFTER `timesheet_deletedby`",
 								"ALTER TABLE `hrm_emp_timesheet` CHANGE `timesheet_deletetime` `timesheet_deletetime` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP",
 								"ALTER TABLE `hrm_emp_reliving_info` CHANGE `k_enrollment_form` `k_enrollment_form` VARCHAR(100) NULL DEFAULT NULL",
 								"ALTER TABLE `hrm_emp_checklist` CHANGE `k_enrollment_form_completed` `k_enrollment_form_completed` VARCHAR(100) NULL DEFAULT NULL",
