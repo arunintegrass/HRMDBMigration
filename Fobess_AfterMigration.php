@@ -24,6 +24,7 @@
 								"ALTER TABLE `hrm_holiday_list_td` DROP `branch_data` ",
 								"ALTER TABLE `events_tb` DROP `branch_data` ",
 								"ALTER TABLE `hrm_category_tb` DROP `branch_data` ",
+								"ALTER TABLE `hrm_project_tb` DROP `branch_data` ",
 								//"ALTER TABLE `hrm_emp_designation_td` DROP `branch_data` ",
 								//"ALTER TABLE `hrm_department_td` DROP `branch_data` ",
 								"ALTER TABLE `hrm_work_shifts` DROP `branch_data` ",

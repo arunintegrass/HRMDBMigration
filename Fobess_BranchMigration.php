@@ -24,6 +24,7 @@
 									['pKey'=>'work_shift_id','fKey'=>'branche_id','tbName'=>'hrm_work_shifts','extraCond'=>"  branch_data = 'US' "],
 									['pKey'=>'leave_type_id','fKey'=>'branche_id','tbName'=>'hrm_leave_type_tb','extraCond'=>"  hrm_version = 'US' "],
 									['pKey'=>'custom_msg_id','fKey'=>'branche_id','tbName'=>'hrm_custom_msg','extraCond'=>"  hrm_version = 'US' "],
+									['pKey'=>'project_id','fKey'=>'branche_id','tbName'=>'hrm_project_tb','extraCond'=>"  hrm_version = 'US' "],
 								),	
 						);	
 	branchTableMigration($dbArray,$mainTable,$subTableArray,ucfirst($moduleName).'Module_',$con,$dbArray['finalDB']);
