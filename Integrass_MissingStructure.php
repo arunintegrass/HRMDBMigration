@@ -46,6 +46,8 @@
 								"ALTER TABLE `hrm_emp_timesheet` ADD `branch_data` VARCHAR(10) NOT NULL DEFAULT 'IN' ",	
 								"ALTER TABLE `hrm_leave_type_tb` ADD `type_leave` INT NOT NULL AFTER `leave_mon_up`, ADD `add_balance_year` INT NOT NULL AFTER `type_leave`",
 								"ALTER TABLE `hrm_leave_type_tb` ADD `hrm_version` VARCHAR(10) NOT NULL DEFAULT 'IN'",	
+								"ALTER TABLE `hrm_custom_msg` ADD `hrm_version` VARCHAR(10) NOT NULL DEFAULT 'IN'",	
+								"ALTER TABLE `hrm_project_tb` ADD `hrm_version` VARCHAR(10) NOT NULL DEFAULT 'IN'",	
 								"UPDATE `hrm_company_td` SET `currency_type` = '1' ",
 								"ALTER TABLE `payroll_salary_tb` ADD `currency_type` INT NOT NULL DEFAULT '1' AFTER `grade_id`",
 								"ALTER TABLE `hrm_emp_exp_td` ADD `currency_type` INT NOT NULL DEFAULT '1' AFTER `amount`",
@@ -129,6 +131,8 @@
 								"ALTER TABLE `hrm_emp_leave_bal_tb` ADD `leave_bal_det` VARCHAR(255) NOT NULL AFTER `leavey_mon_year`",								
 								"ALTER TABLE `hrm_leave_type_tb` ADD `leave_mon_up` DATE NOT NULL AFTER `leave_des`",								
 								"ALTER TABLE `hrm_leave_type_tb` ADD `hrm_version` VARCHAR(10) NOT NULL DEFAULT 'US'",								
+								"ALTER TABLE `hrm_custom_msg` ADD `hrm_version` VARCHAR(10) NOT NULL DEFAULT 'US'",								
+								"ALTER TABLE `hrm_project_tb` ADD `hrm_version` VARCHAR(10) NOT NULL DEFAULT 'US'",								
 								"ALTER TABLE `hrm_category_tb` ADD `category_flag` INT NOT NULL DEFAULT '0'",	//Need to comment for Live server
 								"ALTER TABLE `hrm_document_map_td` CHANGE `updated_on` `updated_on` DATETIME",
 								"ALTER TABLE `hrm_emp_exp_td` CHANGE `updated_on` `updated_on` DATETIME",
