@@ -112,7 +112,21 @@
 											 `pause_count` int(11) NOT NULL
 											) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1",
 								"ALTER TABLE `time_tracker`	 ADD PRIMARY KEY (`logid`) ",
-								"ALTER TABLE `time_tracker`	 MODIFY `logid` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=1",
+								"ALTER TABLE `time_tracker`	 MODIFY `logid` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=1",							
+								
+								"ALTER TABLE `hrm_emp_timesheet` ADD `timesheet_deletestatus` INT(10) NOT NULL DEFAULT '0' COMMENT 'Active – 0,Delete – 1' AFTER `timesheet_reject_reason`, ADD `timesheet_deletedby` INT(11) NOT NULL AFTER `timesheet_deletestatus`, ADD `timesheet_deletetime` DATETIME NOT NULL AFTER `timesheet_deletedby`"
+								"ALTER TABLE `hrm_emp_timesheet` CHANGE `timesheet_deletetime` `timesheet_deletetime` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP",
+								"ALTER TABLE `hrm_emp_reliving_info` CHANGE `k_enrollment_form` `k_enrollment_form` VARCHAR(100) NULL DEFAULT NULL",
+								"ALTER TABLE `hrm_emp_checklist` CHANGE `k_enrollment_form_completed` `k_enrollment_form_completed` VARCHAR(100) NULL DEFAULT NULL",
+								"ALTER TABLE `hrm_custom_msg` ADD `branche_id` INT(11) NOT NULL DEFAULT '1'",
+								"CREATE TABLE `hrm_emp_worklocation` ( `emp_workloc_id`INT(11) NOT NULL AUTO_INCREMENT , `employee_id` INT(11) NOT NULL ,`company_name` VARCHAR(500) NOT NULL , `company_address` TEXT NOT NULL ,`company_city` VARCHAR(45) NOT NULL , `company_state` VARCHAR(45) NOT NULL, `company_country` VARCHAR(45) NOT NULL , `company_zip_code` VARCHAR(45)NOT NULL , `company_start_date` DATE NOT NULL , `company_end_date` DATE NOTNULL , `onsite_mgr_name` VARCHAR(45) NOT NULL , `onsite_mgr_phone`VARCHAR(40) NOT NULL , `work_loc_status` INT(11) NOT NULL DEFAULT '0'COMMENT '0 - Active, 1 - Deactive' , PRIMARY KEY (`emp_workloc_id`)) ENGINE= InnoDB",
+								"ALTER TABLE `hrm_employee_td` ADD `branch_permission` INT(11) NOT NULL DEFAULT '0' COMMENT '0 – No branch permission, 1 – Branch permission enabled' ",
+								"ALTER TABLE `hrm_emp_leave_td` ADD `approval_reason` VARCHAR(500) NOT NULL AFTER `leave_reason`",
+								"ALTER TABLE `hrm_emp_timesheet` ADD `approval_reason` VARCHAR(500) NOT NULL AFTER `timesheet_adate`",
+								"ALTER TABLE `hrm_department_td` ADD `department_status` INT NOT NULL DEFAULT '0' AFTER `dept_track_date`",
+								"ALTER TABLE `hrm_emp_designation_td` ADD `designation_status` INT NOT NULL DEFAULT '0' AFTER `dept_track_date`",
+								"ALTER TABLE `hrm_emp_descriptionexp_td` ADD `approval_reason` VARCHAR(500) NOT NULL AFTER `send_to`",
+								"ALTER TABLE `time_tracker` ADD `comments` VARCHAR(500) NULL DEFAULT NULL AFTER `pause_count`",
 								
 								//Truncate the Master Tables 		
 								/*"TRUNCATE `hrm_setting_fields_tb`",
